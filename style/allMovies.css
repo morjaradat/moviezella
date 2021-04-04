@@ -1,0 +1,130 @@
+/* Global styles */
+
+
+/* Header style */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 2222;
+    background-color: rgb(0 0 0 / 54%);
+    height: 60px;
+}
+header .logo2{
+    position: relative;
+    font-weight: 700;
+    top: 10px;
+    left: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 80px;
+    top: 10px;
+
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin:  0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #e75480;
+}
+
+/* Main style */
+main{
+    width: 100%;
+    height: 800px;
+}
+#preview{
+    position: relative;
+    width: 100%;
+    height: 511px;
+    top: 60px;
+    background-color: white;
+    z-index: 1;
+}
+#preview h3{
+    font-size: 1.5rem;
+    margin-left: 20px;
+    position: relative;
+    top: 22px;
+}
+#movie-player{
+    width: 100%;
+    height: 458px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#movie-player iframe{
+    position: relative;
+    top: 52px;
+}
+#allMovies-Container{
+    width: 90%;
+    display: flex;
+    position: relative;
+    top: 172px;
+    margin-left: auto;
+    margin-right: auto;
+    & :scroll-behavior{
+
+    }
+}
+.movies-container{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.movies-container img{
+    width: 240px;
+    height: 320px;
+}
+.movies-container span{
+    font-size: 14pt;
+    margin-top: 3%;
+    text-align: center;
+    text-transform: uppercase;
+}
+span a{
+    text-decoration: none;
+    color: black;
+}
+
+/* footer style */
+footer{
+    width: 100%;
+    height: 20vh;
+}
