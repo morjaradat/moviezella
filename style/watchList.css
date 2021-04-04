@@ -38,6 +38,7 @@ button.moreInfo {
     right: 233px;
     position: absolute;
 } 
+
 header{
     position: fixed;
     top: 0;
@@ -49,6 +50,27 @@ header{
     transition: 0.6s;
     z-index: 2222;
 }
+
+header .logo2{
+    position: relative;
+    font-weight: 700;
+    top: 10px;
+    left: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header.sticky .logo2{
+    color: black;
+    top: 0;
+    left: 0;
+}
+
 header ul{
     position: relative;
     display: flex;
@@ -58,16 +80,63 @@ header ul{
     top: 10px;
 
 }
-header ul li{
-    position: relative;
-    list-style: none;
-    
-}
 header.sticky ul{
 
     top: 0;
 
 }
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin:  0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #e75480;
+}
+
+
+header.sticky{
+    padding:  5px 10px;
+    background: #fff;
+    /* border-radius: 100% 0% 100% 0% / 0% 20% 50% 20% ;  */
+
+}
+
+header.sticky ul li a {
+     color: black;
+}
+header.sticky ul li a:hover {
+    color: #e75480;
+}
 body{
-    background-color: rgb(248, 214, 224)
+    background-color: darkblue
+}
+.containar{
+    width: 100%;
+    height: 100vh;
+    background-color: darkgreen;
+}
+.containar div{
+    width: 50%;
+    margin-left: 25%;
+    height: 50vh;
+    background-color: rgb(165, 231, 12);
+    margin-top: 25vh;
+
+}
+.containar div img{
+    width: 100%;
+    height: 100%;
 }
