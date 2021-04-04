@@ -13,7 +13,7 @@ ratingbox.addEventListener('click',(e)=>{
         });
         elClass.add('active');
     }
-    
+    console.log(e.target.classList);
 });
 
 // console.log(55)

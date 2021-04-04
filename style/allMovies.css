@@ -1,0 +1,54 @@
+/* Global styles */
+
+
+/* Header style */
+header{
+    width: 100%;
+    height: 30vh;
+}
+header h1{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    background-color: #0000005e;
+}
+/* Main style */
+main{
+    width: 100%;
+    height: 80vh;
+}
+main h3{
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+#allMovies-Container{
+    width: 65%;
+    display: flex;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 18%;
+    margin-right: 18%;
+    background-color: #eee;
+}
+.movies-container{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+.movies-container span{
+    font-size: 14pt;
+    order: 2;
+    text-align: center;
+}
+/* footer style */
+footer{
+    width: 100%;
+    height: 20vh;
+}
