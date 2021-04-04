@@ -65,8 +65,15 @@ playerListener.addEventListener('click', (event)=> {
     const moviePlayerContainer = document.getElementById('movie-player');
     moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovies[moviesNames.indexOf(event.target.alt)].mainImage})`;
     moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovies[moviesNames.indexOf(event.target.alt)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
+    topFunction()
   }
 });
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 // calling out functions
 generateMovies();

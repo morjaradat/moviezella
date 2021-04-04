@@ -1,5 +1,7 @@
 /* Global styles */
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* Header style */
 header{
