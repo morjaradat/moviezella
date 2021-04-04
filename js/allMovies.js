@@ -32,7 +32,8 @@ function generateMovies(){
 // display movie player
 function moviePlayer(){
   const moviePlayerContainer = document.getElementById('movie-player');
-  moviePlayerContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/tFMo3UJ4B4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>';
+  moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovies[0].mainImage})`;
+  moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovies[0].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
 }
 
 // function that displays movie objects on screen
@@ -48,21 +49,24 @@ function displayMovie(){
     elMovieImg.alt = `${Movies.allMovies[i].name}`;
     elMovie.appendChild(elMovieImg);
     const elMovieTitle = document.createElement('span');
-    elMovieTitle.textContent = Movies.allMovies[i].name;
+    const link = document.createElement('a');
+    link.setAttribute('href', '#preview');
+    link.textContent = Movies.allMovies[i].name;
+    elMovieTitle.appendChild(link);
     elMovie.appendChild(elMovieTitle);
   }
 }
 
 // displaying thr trailer when clicked on video image
-playerListener.addEventListener('click', moviePlayerEvent);
-function moviePlayerEvent(event){
+playerListener.addEventListener('click', (event)=> {
   // console.log(event.target.id);
   // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
   if(event.target.id !== 'allMovies-Container'){
     const moviePlayerContainer = document.getElementById('movie-player');
+    moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovies[moviesNames.indexOf(event.target.alt)].mainImage})`;
     moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovies[moviesNames.indexOf(event.target.alt)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
   }
-}
+});
 
 // calling out functions
 generateMovies();
