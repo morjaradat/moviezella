@@ -38,3 +38,30 @@ button.moreInfo {
     right: 233px;
     position: absolute;
 } 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 2222;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 80px;
+    top: 10px;
+
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+body{
+    background-color: rgb(250, 191, 218);
+}

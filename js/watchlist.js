@@ -67,6 +67,11 @@ Watchlist.prototype.render=function(){
     removeButtom.className='remove';
     divEle1.appendChild(removeButtom);
     removeButtom.textContent='X';
+    removeButtom.addEventListener('click',removeItem );
+    function removeItem(event){
+      Watchlist.all.pop();
+      
+    }
 
     let infoButtom=document.createElement('button');
     infoButtom.className='moreInfo';
