@@ -5,7 +5,10 @@
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
 //image,description,URL
-
+window.addEventListener('scroll',()=>{
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky',window.scrollY > 0);
+})
 function Watchlist(name,rate,categories,image){
   this.name=name;
   this.rate=rate;
@@ -33,7 +36,7 @@ console.log(Watchlist.all);
   </ul> */}
 
 Watchlist.prototype.render=function(){
-  for (let i = 0; i <Watchlist.all.length; i++) {
+  /*for (let i = 0; i <Watchlist.all.length; i++) {
     let container = document.getElementById('watch-list');
     let liEle =document.createElement('li');
     container.appendChild(liEle);
@@ -69,7 +72,7 @@ Watchlist.prototype.render=function(){
     removeButtom.textContent='X';
     removeButtom.addEventListener('click',removeItem );
     function removeItem(event){
-      Watchlist.all.pop();
+    
       
     }
 
@@ -77,7 +80,8 @@ Watchlist.prototype.render=function(){
     infoButtom.className='moreInfo';
     divEle1.appendChild(infoButtom);
     infoButtom.textContent='VIEW INFO';
-  }
+  }*/
+  //let container= document.getElementById('watch-list')
 
 };
 const newMoive = new Watchlist('movie',8.1,'action','https://placehold.it/200x300/ddd');
