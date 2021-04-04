@@ -26,11 +26,6 @@ let coverImg = [
 
 
 
-
-
-
-
-
 let image = document.getElementById('cover');
 let movieName = document.getElementById('movieName')
 let categories = document.getElementById('categories')
@@ -46,6 +41,7 @@ window.addEventListener('load',()=>{
         index +=1;
         if(index < coverImg.length){
             image.setAttribute('src',`img/covers/${coverImg[index].img}`)
+            image.setAttribute('class',`fade-in`)
             movieName.textContent = coverImg[index].name;
             categories.textContent = coverImg[index].categories;
         }else{
