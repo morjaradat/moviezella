@@ -36,7 +36,7 @@ console.log(Watchlist.all);
   </ul> */}
 
 Watchlist.prototype.render=function(){
-  /*for (let i = 0; i <Watchlist.all.length; i++) {
+   /* for (let i = 0; i <Watchlist.all.length; i++) {
     let container = document.getElementById('watch-list');
     let liEle =document.createElement('li');
     container.appendChild(liEle);
@@ -81,13 +81,36 @@ Watchlist.prototype.render=function(){
     divEle1.appendChild(infoButtom);
     infoButtom.textContent='VIEW INFO';
   }*/
-  //let container= document.getElementById('watch-list')
-
+  
+  let container= document.getElementById('watch-list')
+  let div = document.createElement('div');
+  div.className='list-section';
+  container.appendChild(div);
+  let img = document.createElement('img')
+  div.appendChild(img);
+  img.src=`${this.image}`;
+  let h2=document.createElement('h2');
+  div.appendChild(h2);
+  h2.textContent=`${this.name}`;
+  let pE1=document.createElement('p');
+  div.appendChild(pE1);
+  pE1.textContent=`${this.rate}`;
+  let pE2=document.createElement('p');
+  div.appendChild(pE2);
+  pE2.textContent=`${this.categories}`;
+  let button=document.createElement('button');
+  button.className='remove';
+  div.appendChild(button);
+  button.textContent=`X`;
+  
 };
-const newMoive = new Watchlist('movie',8.1,'action','https://placehold.it/200x300/ddd');
+const newMoive = new Watchlist('movie',8.1,'action','../img/mainarrival.jpg');
 newMoive.render();
 
-const test =new Watchlist('fly',7,'Adventure','../img/53851c3548edb28c90ba71841b0e58b2a910b5cc.png');
+const test =new Watchlist('fly',7,'Adventure','../img/arrival.jpg');
 test.render();
+
+const test2=new Watchlist('Education', 8.5 , 'Education','../img/detachment.jpg');
+test2.render();
 
 
