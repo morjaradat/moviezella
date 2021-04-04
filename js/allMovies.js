@@ -2,15 +2,19 @@
 
 // Global variables:
 // Movies names:
-const moviesNames = ['movie1', 'movie2', 'movie3', 'movie4', 'movie5'];
+let moviesNames = ['arrival', 'justice-league', 'detachment', 'guardians-of-the-galaxy-vol2'];
+// Path Ids:
+let pathIds = ['tFMo3UJ4B4g', '3cxixDgHUYw', 'w7lBleOF9Pw', 'dW1BIid8Osg'];
+// event listener element
+const playerListener = document.getElementById('allMovies-Container');
 
 // Movies constructor
 function Movies(name){
   this.name = name;
-  this.mainImage = `../img/${name}.png`;
-  this.profileImage = `../img/min${name}.png`;
-  this.path = `${name}`;
-  this.category;
+  this.mainImage = `../img/main${name}.jpg`;
+  this.profileImage = `../img/${name}.jpg`;
+  this.path = '';
+  this.category = '';
   Movies.allMovies.push(this);
 }
 Movies.allMovies = [];
@@ -19,17 +23,21 @@ Movies.allMovies = [];
 function generateMovies(){
   for(let i=0; i<moviesNames.length; i++){
     new Movies(moviesNames[i]);
+    Movies.allMovies[i].path = pathIds[i];
   }
 }
 // generateMovies();
 // console.log(Movies.allMovies);
 
+// display movie player
+function moviePlayer(){
+  const moviePlayerContainer = document.getElementById('movie-player');
+  moviePlayerContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/tFMo3UJ4B4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>';
+}
+
 // function that displays movie objects on screen
 function displayMovie(){
-  const elMain = document.getElementsByTagName('main')[0];
-  const elMainContainer = document.createElement('div');
-  elMain.appendChild(elMainContainer);
-  elMainContainer.setAttribute('id', 'allMovies-Container');
+  const elMainContainer = document.getElementById('allMovies-Container');
   for(let i=0; i<moviesNames.length; i++){
     const elMovie = document.createElement('div');
     elMovie.setAttribute('class', 'movies-container');
@@ -44,7 +52,21 @@ function displayMovie(){
     elMovie.appendChild(elMovieTitle);
   }
 }
+
+// displaying thr trailer when clicked on video image
+playerListener.addEventListener('click', moviePlayerEvent);
+function moviePlayerEvent(event){
+  // console.log(event.target.id);
+  // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
+  if(event.target.id !== 'allMovies-Container'){
+    const moviePlayerContainer = document.getElementById('movie-player');
+    moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovies[moviesNames.indexOf(event.target.alt)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
+  }
+}
+
+// calling out functions
 generateMovies();
+moviePlayer();
 displayMovie();
 
 
