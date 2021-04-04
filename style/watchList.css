@@ -1,0 +1,40 @@
+.list-section {
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    left: 209px;
+    top: 81px;
+    width: 38%;
+    height: 245px;
+}
+.list-section img {
+    position: relative;
+    left: 8px;
+    top: 7px;
+    width: 156px;
+}
+.info {
+    position: relative;
+    left: 175px;
+    bottom: 185px;
+    font-size: 30px;
+}
+.info h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+button.remove {
+    position: absolute;
+    top: 11px;
+    right: 19px;
+}
+button.moreInfo {
+    width: 110px;
+    height: 54px;
+    background-color: #e75480;
+    border: #e75480 solid 1px;
+    cursor: pointer;
+    bottom: 41px;
+    right: 233px;
+    position: absolute;
+} 
