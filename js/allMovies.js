@@ -29,6 +29,9 @@ function generateMovies(){
     Movies.allMovies[i].path = pathIds[i];
   }
 }
+
+
+
 // generateMovies();
 // console.log(Movies.allMovies);
 
