@@ -104,7 +104,7 @@ Watchlist.prototype.render=function(){
   button.textContent=`X`;
   
 };
-const newMoive = new Watchlist('movie',8.1,'action','../img/mainarrival.jpg');
+const newMoive = new Watchlist('movie',8.1,'action','../img/Dracula-Untold.jpg');
 newMoive.render();
 
 const test =new Watchlist('fly',7,'Adventure','../img/arrival.jpg');
