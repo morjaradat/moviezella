@@ -1,7 +1,7 @@
 'use strict';
 // let container = document.getElementById('watch-list');
 // let watchListLibary = JSON.parse('')     
- // the key name in local storage
+// the key name in local storage
 
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
@@ -54,6 +54,11 @@ Watchlist.prototype.render=function(){
   divEle1.appendChild(movieImg);
   movieImg.src=`${this.image}`; ////////////------
 
+  // let movieCover=document.createElement('img');
+  // divEle1.appendChild(movieCover);
+  // movieImg.src='../text.jpg';
+  // movieImg.setAttribute('id','cover');
+
   let divEle2=document.createElement('div');
   divEle2.className='info';
   divEle1.appendChild(divEle2);
@@ -73,7 +78,7 @@ Watchlist.prototype.render=function(){
   let removeButtom=document.createElement('button');
   removeButtom.className='remove';
   divEle1.appendChild(removeButtom);
-  removeButtom.textContent='X';
+  removeButtom.textContent='Remove';
 
   removeButtom.addEventListener('click',remove);
   function remove(){
