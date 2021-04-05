@@ -8,7 +8,8 @@
 window.addEventListener('scroll',()=>{
   let header = document.querySelector('header');
   header.classList.toggle('sticky',window.scrollY > 0);
-})
+});
+
 function Watchlist(name,rate,categories,image){
   this.name=name;
   this.rate=rate;
@@ -34,76 +35,83 @@ console.log(Watchlist.all);
 </div>
 </li>
   </ul> */}
-
+let i =0;
 Watchlist.prototype.render=function(){
-   /* for (let i = 0; i <Watchlist.all.length; i++) {
-    let container = document.getElementById('watch-list');
-    let liEle =document.createElement('li');
-    container.appendChild(liEle);
 
-    let divEle1= document.createElement('div');
-    divEle1.className='list-section';
-    liEle.appendChild(divEle1);
+  // for (let i = 0; i < Watchlist.all.length; i++) {
+
+  let container = document.getElementById('watch-list');
+  let liEle =document.createElement('li');
+  liEle.setAttribute('id',`${Watchlist.all[i].name}`);
+  container.appendChild(liEle);
 
 
-    let movieImg= document.createElement('img');
-    divEle1.appendChild(movieImg);
-    movieImg.src=`${this.image}`; ////////////------
+  let divEle1= document.createElement('div');
+  divEle1.className='list-section';
+  liEle.appendChild(divEle1);
 
-    let divEle2=document.createElement('div');
-    divEle2.className='info';
-    divEle1.appendChild(divEle2);
 
-    let h2Ele=document.createElement('h2');
-    divEle2.appendChild(h2Ele);
-    h2Ele.textContent=`${this.name}`;
+  let movieImg= document.createElement('img');
+  divEle1.appendChild(movieImg);
+  movieImg.src=`${this.image}`; ////////////------
 
-    let paraEle1=document.createElement('p');
-    divEle2.appendChild(paraEle1);
-    paraEle1.textContent=`${this.rate}`;
+  let divEle2=document.createElement('div');
+  divEle2.className='info';
+  divEle1.appendChild(divEle2);
 
-    let paraEle2=document.createElement('p');
-    divEle2.appendChild(paraEle2);
-    paraEle2.textContent=`${this.categories}`;
+  let h2Ele=document.createElement('h2');
+  divEle2.appendChild(h2Ele);
+  h2Ele.textContent=`${this.name}`;
 
-    let removeButtom=document.createElement('button');
-    removeButtom.className='remove';
-    divEle1.appendChild(removeButtom);
-    removeButtom.textContent='X';
-    removeButtom.addEventListener('click',removeItem );
-    function removeItem(event){
-    
-      
-    }
+  let paraEle1=document.createElement('p');
+  divEle2.appendChild(paraEle1);
+  paraEle1.textContent=`${this.rate}`;
 
-    let infoButtom=document.createElement('button');
-    infoButtom.className='moreInfo';
-    divEle1.appendChild(infoButtom);
-    infoButtom.textContent='VIEW INFO';
-  }*/
-  
-  let container= document.getElementById('watch-list')
-  let div = document.createElement('div');
-  div.className='list-section';
-  container.appendChild(div);
-  let img = document.createElement('img')
-  div.appendChild(img);
-  img.src=`${this.image}`;
-  let h2=document.createElement('h2');
-  div.appendChild(h2);
-  h2.textContent=`${this.name}`;
-  let pE1=document.createElement('p');
-  div.appendChild(pE1);
-  pE1.textContent=`${this.rate}`;
-  let pE2=document.createElement('p');
-  div.appendChild(pE2);
-  pE2.textContent=`${this.categories}`;
-  let button=document.createElement('button');
-  button.className='remove';
-  div.appendChild(button);
-  button.textContent=`X`;
-  
+  let paraEle2=document.createElement('p');
+  divEle2.appendChild(paraEle2);
+  paraEle2.textContent=`${this.categories}`;
+
+  let removeButtom=document.createElement('button');
+  removeButtom.className=`${Watchlist.all[i].name}`;
+  divEle1.appendChild(removeButtom);
+  removeButtom.textContent='X';
+
+  removeButtom.addEventListener('click',remove);
+  function remove(){
+    container.removeChild(liEle);
+  }
+
+  let infoButtom=document.createElement('button');
+  infoButtom.className='moreInfo';
+  divEle1.appendChild(infoButtom);
+  infoButtom.textContent='VIEW INFO';
+  i++;
+  // }
+
 };
+
+// let container= document.getElementById('watch-list');
+// let div = document.createElement('div');
+// div.className='list-section';
+// container.appendChild(div);
+// let img = document.createElement('img');
+// div.appendChild(img);
+// img.src=`${this.image}`;
+// let h2=document.createElement('h2');
+// div.appendChild(h2);
+// h2.textContent=`${this.name}`;
+// let pE1=document.createElement('p');
+// div.appendChild(pE1);
+// pE1.textContent=`${this.rate}`;
+// let pE2=document.createElement('p');
+// div.appendChild(pE2);
+// pE2.textContent=`${this.categories}`;
+// let button=document.createElement('button');
+// button.className='remove';
+// div.appendChild(button);
+// button.textContent=`X`;
+
+
 const newMoive = new Watchlist('movie',8.1,'action','../img/mainarrival.jpg');
 newMoive.render();
 
@@ -112,5 +120,3 @@ test.render();
 
 const test2=new Watchlist('Education', 8.5 , 'Education','../img/detachment.jpg');
 test2.render();
-
-
