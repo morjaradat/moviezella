@@ -30,6 +30,11 @@ header.sticky .logo2{
     top: 0;
     left: 0;
 }
+header.sticky2 .logo2{
+    color: whitesmoke;
+    top: 0;
+    left: 0;
+}
 
 header ul{
     position: relative;
@@ -73,9 +78,19 @@ header.sticky{
     /* border-radius: 100% 0% 100% 0% / 0% 20% 50% 20% ;  */
 
 }
+header.sticky2{
+    padding:  5px 10px;
+    background: #000;
+    
+    /* border-radius: 100% 0% 100% 0% / 0% 20% 50% 20% ;  */
+
+}
 
 header.sticky ul li a {
      color: black;
+}
+header.sticky2 ul li a {
+    color: #fff;
 }
 header.sticky ul li a:hover {
     color: #e75480;
@@ -289,7 +304,7 @@ header.sticky ul li a:hover {
 .nav2 ul{
     list-style: none;
     width: 22%;
-    margin-left: 39%;
+    margin: auto;
 }
 
 .nav2 ul li {
@@ -302,9 +317,11 @@ header.sticky ul li a:hover {
     color: #000;
     font-family: 'Oswald', sans-serif;
     transition: 0.5s;
+    font-size: 1rem;
 }
 .nav2 ul li a:hover{
     color: #e75480;
+    cursor: pointer;
 }
 
 
@@ -314,7 +331,9 @@ header.sticky ul li a:hover {
     /* background-color: blue; */
     width: 100%;
     height: 80vh;
+    
 }
+
 
 .moviesCard .card{
     display: inline-block;
@@ -324,6 +343,9 @@ header.sticky ul li a:hover {
     height: 55vh;
     /* background-color: #e75480; */
     border: 2px solid #e75480;
+    animation: pulse 5s infinite;
+    border: 3px solid black;
+
 }
 
 .moviesCard .card img{
@@ -339,6 +361,22 @@ header.sticky ul li a:hover {
     font-family: 'Oswald', sans-serif;
     margin-top: 1rem;
 }
-  /* .hero h3 {
 
-  } */
+.display{
+    display: none;
+}
+
+  @keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 #e75480;
+    }
+    70%{
+        box-shadow: 0 0 0 10px rgba(253,87,191,0);
+
+    }
+   
+}  
+
+#ratingcardsContainer{
+    display: none;
+}

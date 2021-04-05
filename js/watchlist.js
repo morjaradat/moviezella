@@ -90,28 +90,6 @@ Watchlist.prototype.render=function(){
 
 };
 
-// let container= document.getElementById('watch-list');
-// let div = document.createElement('div');
-// div.className='list-section';
-// container.appendChild(div);
-// let img = document.createElement('img');
-// div.appendChild(img);
-// img.src=`${this.image}`;
-// let h2=document.createElement('h2');
-// div.appendChild(h2);
-// h2.textContent=`${this.name}`;
-// let pE1=document.createElement('p');
-// div.appendChild(pE1);
-// pE1.textContent=`${this.rate}`;
-// let pE2=document.createElement('p');
-// div.appendChild(pE2);
-// pE2.textContent=`${this.categories}`;
-// let button=document.createElement('button');
-// button.className='remove';
-// div.appendChild(button);
-// button.textContent=`X`;
-
-
 const newMoive = new Watchlist('movie',8.1,'action','../img/mainarrival.jpg');
 newMoive.render();
 

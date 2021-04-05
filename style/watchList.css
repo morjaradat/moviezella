@@ -124,13 +124,7 @@ header.sticky ul li a {
 header.sticky ul li a:hover {
     color: #e75480;
 }
-/* body{
-    background-color:rgb(255, 168, 216); 
-} */
-/* .containar{
-    width: 100%;
-    height: 100vh;
-    background-color:rgb(255, 255, 255); 
+
     
 }
 .containar div{
@@ -144,9 +138,25 @@ header.sticky ul li a:hover {
 .containar div img{
     width: 100%;
     height: 100%;
+    animation: pulse 5s infinite;
     
 }
+
 .currentLink {
    color: #640200;
    background-color: #000000;
 } */
+
+.display{
+    display: none;
+}
+
+  @keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 #e75480;
+    }
+    70%{
+        box-shadow: 0 0 0 10px rgba(253,87,191,0);
+
+    }
+
