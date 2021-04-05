@@ -1,26 +1,29 @@
 .list-section {
     position: relative;
-    border: 1px solid black;
+    border: 5px solid #000000a8;
+    box-shadow: 6px 5px 7px #f3575791;
     margin-bottom: 30px;
-    left: 209px;
+    margin-top: 40px;
+    left: 311px;
     top: 81px;
-    width: 38%;
-    height: 245px;
+    width: 50%;
+    height: 291px;
 }
 .list-section img {
     position: relative;
     left: 8px;
     top: 7px;
-    width: 156px;
+    width: 186px;
 }
 .info {
     position: relative;
-    left: 175px;
-    bottom: 185px;
+    left: 249px;
+    bottom: 253px;
     font-size: 30px;
 }
 .info h2{
-    font-size: 30px;
+    font-size: 37px;
+    font-family: 'Oswald';
     font-weight: bold;
 }
 button.remove {
@@ -125,8 +128,6 @@ header.sticky ul li a:hover {
     color: #e75480;
 }
 
-    
-}
 .containar div{
     width: 50%;
     margin-left: 170px;
@@ -159,4 +160,4 @@ header.sticky ul li a:hover {
         box-shadow: 0 0 0 10px rgba(253,87,191,0);
 
     }
-
+  }

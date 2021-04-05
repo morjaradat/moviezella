@@ -1,6 +1,7 @@
 'use strict';
 // let container = document.getElementById('watch-list');
-// let watchListLibary = JSON.parse('')      // the key name in local storage
+// let watchListLibary = JSON.parse('')     
+ // the key name in local storage
 
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
@@ -15,9 +16,9 @@ function Watchlist(name,rate,categories,image){
   this.rate=rate;
   this.categories=categories;
   this.image=image;
-  // this.description=description;
-  // this.actors=actors;
   // this.URL=URL;
+
+
   Watchlist.all.push(this);
 }
 Watchlist.all=[];
@@ -35,14 +36,12 @@ console.log(Watchlist.all);
 </div>
 </li>
   </ul> */}
-let i =0;
-Watchlist.prototype.render=function(){
 
-  // for (let i = 0; i < Watchlist.all.length; i++) {
+Watchlist.prototype.render=function(){
 
   let container = document.getElementById('watch-list');
   let liEle =document.createElement('li');
-  liEle.setAttribute('id',`${Watchlist.all[i].name}`);
+
   container.appendChild(liEle);
 
 
@@ -72,7 +71,7 @@ Watchlist.prototype.render=function(){
   paraEle2.textContent=`${this.categories}`;
 
   let removeButtom=document.createElement('button');
-  removeButtom.className=`${Watchlist.all[i].name}`;
+  removeButtom.className='remove';
   divEle1.appendChild(removeButtom);
   removeButtom.textContent='X';
 
@@ -85,12 +84,14 @@ Watchlist.prototype.render=function(){
   infoButtom.className='moreInfo';
   divEle1.appendChild(infoButtom);
   infoButtom.textContent='VIEW INFO';
-  i++;
+  // infoButtom.addEventListener('click',info);
+  // function info(){
+  //   container.removeChild(liEle);
   // }
 
 };
 
-const newMoive = new Watchlist('movie',8.1,'action','../img/mainarrival.jpg');
+const newMoive = new Watchlist('movie',8.1,'action','../img/Dracula-Untold.jpg');
 newMoive.render();
 
 const test =new Watchlist('fly',7,'Adventure','../img/arrival.jpg');
