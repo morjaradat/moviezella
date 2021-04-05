@@ -1,36 +1,8 @@
 'use strict';
 
 // Global variables:
-// Movies names:
-let moviesNames = ['arrival', 'justice-league', 'detachment', 'guardians-of-the-galaxy-vol2'];
-// Path Ids:
-let pathIds = ['tFMo3UJ4B4g', '3cxixDgHUYw', 'w7lBleOF9Pw', 'dW1BIid8Osg'];
-// Categories:
-let category = ['sci-fi, drama', 'superhero', 'drama', 'superhero, comedy'];
 // event listener element
 const playerListener = document.getElementById('allMovies-Container');
-
-// Movies constructor
-function Movies(name){
-  this.name = name;
-  this.mainImage = `../img/main${name}.jpg`;
-  this.profileImage = `../img/${name}.jpg`;
-  this.path = '';
-  this.category = '';
-  Movies.allMovies.push(this);
-}
-Movies.allMovies = [];
-
-// creating a function that will generate movie objects & assign path & category
-function generateMovies(){
-  for(let i=0; i<moviesNames.length; i++){
-    new Movies(moviesNames[i]);
-    Movies.allMovies[i].category = category[i];
-    Movies.allMovies[i].path = pathIds[i];
-  }
-}
-
-
 
 // generateMovies();
 // console.log(Movies.allMovies);
@@ -85,6 +57,6 @@ function topFunction() {
 
 
 // calling out functions
-generateMovies();
-moviePlayer();
-displayMovie();
+// generateMovies();
+// moviePlayer();
+// displayMovie();
