@@ -29,7 +29,7 @@ let allMovies = [
     views:4555,
     rate : 4.6
   },
-  {   
+  {
     id:4,
     name : 'arrival',
     categories :'Drama Sci-Fi',
@@ -72,13 +72,16 @@ let allMovies = [
 
 ];
 // Movies constructor
-function Movies(name,category,duration,pathIds,mainImage,profileImage){
+function Movies(name,category,duration,pathIds,mainImage,profileImage,actors){
   this.name = name;
   this.mainImage = `../img/covers/${mainImage}`;
   this.profileImage = `../img/${name.replace(/\s+/g, '-')}.jpg`;
   this.path = pathIds;
   this.category = category;
   this.duration = duration;
+  this.actors = actors;
+  this.rate = randomRate(5,1);
+  this.views = randomViews(10000,1000);
   Movies.allMovie.push(this);
 }
 Movies.allMovie = [];
@@ -88,8 +91,18 @@ function generateMovies(){
   for(let i=0; i<allMovies.length; i++){
     new Movies(allMovies[i].name,allMovies[i].categories,allMovies[i].Duration,allMovies[i].pathIds,allMovies[i].coverImg);
   }
-  console.log(Movies.allMovie);
+  // console.log(Movies.allMovie);
 }
+
+// function that generate random views
+function randomViews(max,min){
+  return this.views = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// function that generate random rates
+function randomRate(max,min){
+  return this.rate = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 generateMovies();
 
-// export default allMovies,Movies,generateMovies()
+// export default {allMovies,Movies.allMovie,generateMovies()}
