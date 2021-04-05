@@ -6,7 +6,7 @@ const playerListener = document.getElementById('allMovies-Container');
 
 // display movie player
 function moviePlayer(){
-  const moviePlayerContainer = document.getElementById('movie-player');
+  const moviePlayerContainer = document.getElementById('trailer');
   moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovie[0].mainImage})`;
   moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[0].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
 }
@@ -34,12 +34,12 @@ function displayMovie(){
 
 // displaying thr trailer when clicked on video image
 playerListener.addEventListener('click', (event)=> {
-  // console.log(event.target.alt);
+  // console.log(event.path[1].id);
   // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
   if(event.target.id !== 'allMovies-Container'){
-    const moviePlayerContainer = document.getElementById('movie-player');
-    moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovies[moviesNames.indexOf(event.target.alt)].mainImage})`;
-    moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovies[moviesNames.indexOf(event.target.alt)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
+    const moviePlayerContainer = document.getElementById('trailer');
+    moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovie[multiIndexOf(event.path[1].id)].mainImage})`;
+    moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[multiIndexOf(event.path[1].id)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
     topFunction();
   }
 });
@@ -50,6 +50,16 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// getting the index in objects:
+function multiIndexOf(index){
+  for(let i=0; i<Movies.allMovie.length; i++){
+    if(Movies.allMovie[i].name === index){
+      return i;
+    }
+  }
+}
+
 // calling out functions
 moviePlayer();
 displayMovie();
+// console.log(Movies.allMovie);

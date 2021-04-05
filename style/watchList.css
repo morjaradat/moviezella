@@ -126,6 +126,7 @@ header ul li a{
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.5s;
+
     font-weight: 600;
 }
 header ul li a:hover{
@@ -155,6 +156,7 @@ header.sticky ul li a:hover {
     height: 50vh;
     background-color:black;
     margin-top: 20vh;
+    animation: pulse 5s infinite;
 
 }
 .containar div img{
