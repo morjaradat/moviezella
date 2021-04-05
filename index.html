@@ -21,7 +21,6 @@
         <ul>
             <li> <a href="./index.html">Home</a> </li>
             <li> <a href="./pages/allMovies.html">All Movies</a> </li>
-            <li> <a href="./pages/movieProfile.html">Actors</a> </li>
             <li> <a href="./pages/watchList.html">Watch List</a> </li>
             <li> <a href="./pages/aboutUs.html">About Us</a> </li>
         </ul>
@@ -30,7 +29,7 @@
      <section class="hero">
         <!-- <h1> THE MOVIEZELLA</h1> -->
         <div class="img"></div>
-        <img src="img/covers/wrath-Of-The-Titans.jpg" id="cover" class="parallax" alt="">
+        <img src="img/covers/WrathOfTheTitans.jpg" id="cover" class="parallax" alt="">
         
         <div class="title">
             <h3 id="movieName">Wrath OF THE TITANS</h3>
@@ -59,31 +58,21 @@
     <section class="moviesList" >
         <div class="nav2">
             <ul>
-                <li> <a href="#">Trending</a> </li>
-                <li><a href="#">Top Rated</a></li>
+                <li> <a id="trend" >Trending</a> </li>
+                <li> <a id="rate" >rating</a> </li>
+                
             </ul>
         </div>
-        <div class="moviesCard">
-            <div class="card">
-                <img src="img/arrival.jpg" alt="">
-                <p>Movie Name</p>
-            </div>
-            <div class="card">
-                <img src="img/justice-league.jpg" alt="">
-                <p>Movie Name</p>
-            </div>
-            <div class="card">
-                <img src="img/detachment.jpg" alt="">
-                <p>Movie Name</p>
-            </div>
-            <div class="card">
-                <img src="img/guardians-of-the-galaxy-vol2.jpg" alt="">
-                <p>Movie Name</p>
-            </div>
+        <div class="moviesCard" id="trendcardsContainer">
+
+
+        </div>
+        <div class="moviesCard" id="ratingcardsContainer">
+            
 
         </div>
     </section>
 
-    <script src="js/home.js"></script>
+    <script type="module"  src="js/home.js"></script>
 </body>
 </html>
