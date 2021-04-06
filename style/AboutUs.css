@@ -761,7 +761,7 @@ footer h1{
 .footerMain{
     position: absolute;
     left: 370px;
-    top:  2480px;
+    top:  1000px;
 
     display: flex; 
     flex-direction: column;
@@ -774,7 +774,10 @@ footer h1{
 .footerMain h5 a{
     text-decoration: none;
     /* text-transform: uppercase; */
-    color: white;
+    color: rgb(217, 255, 0);
+
+    position: absolute;
+    
 }
 
 
