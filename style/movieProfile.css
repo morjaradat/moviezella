@@ -184,7 +184,9 @@ a:hover {
     font-size: 44px;
     margin-bottom: 13px;
     position: relative;
-    left: 5px;
+    left: -17px;
+    top: 46px;
+
   }
 
   span {
@@ -287,6 +289,7 @@ fieldset, label { margin: 0; padding: 0; }
 .rating { 
   border: none;
   float: left;
+  margin-top: 64px;
 }
 
 .rating > input { display: none; } 
