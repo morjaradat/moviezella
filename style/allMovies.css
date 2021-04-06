@@ -97,7 +97,7 @@ header.sticky2 ul li a {
 header.sticky ul li a:hover {
     color: #e75480;
 }
-#myPage a{
+header #myPage a{
     color: #e75480;
     font-size: 1.3rem;
 }
@@ -294,17 +294,31 @@ main{
     margin: 10px;
 } */
 /* //////////////////////////////////////// */
-/* footer style */
-footer{
-    width: 100%;
-    position: relative;
-    top: 9rem;
-    left: 1rem;
-}
 
 @media screen and (min-width: 700px){
     #allMovies-Container{
         flex-direction: row;
         flex-wrap: wrap;
  }
+}
+
+/* footer style */
+footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 9rem;
+    left: 1rem;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
