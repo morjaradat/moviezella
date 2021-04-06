@@ -155,7 +155,7 @@ a:hover {
     overflow: hidden;
     top:0; left:0;
     background:red;
-    background: url("/img/movieprofile/jpbground.jpg");
+    /* background: url("/img/movieprofile/jpbground.jpg"); */
     z-index:-1;
    
     /* transform: skewY(-1deg); */
@@ -266,6 +266,8 @@ a:hover {
     top: -210px;
     color: black;
     font-size: medium;
+    left: -18px;
+    margin: 5px;
 }
 
 .column2 {
@@ -383,7 +385,8 @@ table {
 
     border-spacing: 10px ;
     position: relative;
-    top: -120px;
+    top: -50px;
+    left: -55px;
     
     width: 75%;
   }
@@ -395,12 +398,14 @@ table {
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgb(0, 0, 0 , 0.15);
+    font-size: 18px;
   }
 
 
 
   td {
     padding: 1px 15px;
+    text-align: center;
 
   }
 
@@ -414,6 +419,11 @@ table {
     -webkit-transition: all 1s linear;
 
   } 
+
+ .character{
+   padding: 10px;
+  
+ }
   
 .cast_list tbody tr {
   border-bottom: 1px solid #0e0e0e;
