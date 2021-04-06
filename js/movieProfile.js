@@ -18,6 +18,7 @@ let container = document.getElementById('container');
 
 
 let cata = profile[0].category.split(' ');
+document.getElementById("hero2").style.background = `url(${profile[0].mainImage})`;
 
 
 console.log(cata);
@@ -25,7 +26,7 @@ let html = `<div class="container">
 
 <a href="#"><img src="${profile[0].profileImage}" height="350px" alt="cover" class="cover" /></a>
 
-<div class="hero" >
+<div class="hero" id="hero2">
 
     <div class="details">
 
@@ -130,3 +131,14 @@ let html = `<div class="container">
 
 container.innerHTML = html;
 
+
+
+const watchSection=document.getElementById('watchlist');
+watchSection.addEventListener('click',add);
+function add(event){
+  watchListArray.push(profile);
+  savedMovie=JSON.stringify(watchListArray);
+  localStorage.setItem('watchList', savedMovie);
+  console.log(watchListArray);
+}
+// localStorage.setItem('watchList', JSON.stringify(this.items))
