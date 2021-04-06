@@ -1,4 +1,13 @@
 'use strict';
+// scroll styles for navigation bar
+window.addEventListener('scroll', () => {
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
+window.addEventListener('scroll', () => {
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky2', window.scrollY > 485);
+});
 
 // Global variables:
 // event listener element
@@ -11,51 +20,71 @@ function moviePlayer(){
   moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[0].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
 }
 
-// function that displays movie objects on screen
+// function that displays movie cards on screen
 function displayMovie(){
   const elMainContainer = document.getElementById('allMovies-Container');
   for(let i=0; i<Movies.allMovie.length; i++){
+
     const elMovie = document.createElement('div');
     elMovie.setAttribute('class', 'movies-container');
     elMovie.setAttribute('id', `${Movies.allMovie[i].name}`);
     elMainContainer.appendChild(elMovie);
-    const elImgContainer = document.createElement('div');
-    elImgContainer.setAttribute('class','img-container');
-    elMovie.appendChild(elImgContainer);
+
     const elMovieImg = document.createElement('img');
     elMovieImg.src = `${Movies.allMovie[i].profileImage}`;
     elMovieImg.alt = `${Movies.allMovie[i].name}`;
-    elImgContainer.appendChild(elMovieImg);
+    elMovie.appendChild(elMovieImg);
+
     const elDetails = document.createElement('div');
     elDetails.setAttribute('class', 'details');
+    elDetails.innerHTML = `<i id = "${Movies.allMovie[i].name}" class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="profile">
+    </i>`;
     elMovie.appendChild(elDetails);
-    const elMovieTitle = document.createElement('h4');
+
+    const elMovieTitle = document.createElement('h5');
     elMovieTitle.setAttribute('class','title');
     elMovieTitle.textContent = Movies.allMovie[i].name;
     elDetails.appendChild(elMovieTitle);
-    const elCategory = document.createElement('div');
+
+    const elCategory = document.createElement('span');
     elCategory.setAttribute('class','category');
     elCategory.textContent = `${Movies.allMovie[i].category}`;
-    elMovie.appendChild(elCategory);
-    const elRate = document.createElement('div');
-    elRate.setAttribute('class','rate');
-    elRate.textContent = `rate : ${Movies.allMovie[i].rate}`;
-    elMovie.appendChild(elRate);
-    const elView = document.createElement('div');
+    elDetails.appendChild(elCategory);
+
+    const elRandoms = document.createElement('div');
+    elRandoms.setAttribute('class', 'randoms');
+    elDetails.appendChild(elRandoms);
+    const elView = document.createElement('span');
     elView.setAttribute('class','view');
     elView.textContent = `views : ${Movies.allMovie[i].views}`;
-    elMovie.appendChild(elView);
+    elRandoms.appendChild(elView);
+    const elRate = document.createElement('span');
+    elRate.setAttribute('class','rate');
+    elRate.innerHTML = `<i class="fas fa-star"></i> ${Movies.allMovie[i].rate} / 5`;
+
+    elRandoms.appendChild(elRate);
+    const elTime = document.createElement('div');
+    elTime.setAttribute('class', 'time');
+    elDetails.appendChild(elTime);
+    const elYear =document.createElement('span');
+    elYear.setAttribute('class', 'year');
+    elYear.textContent = `${Movies.allMovie[i].year}`;
+    elTime.appendChild(elYear);
+    const elDuration = document.createElement('span');
+    elDuration.setAttribute('class', 'duration');
+    elDuration.textContent = `${Movies.allMovie[i].duration}`;
+    elTime.appendChild(elDuration);
   }
 }
 
 // displaying thr trailer when clicked on video image
 playerListener.addEventListener('click', (event)=> {
-  console.log(event.target.alt);
+  console.log(event.target.id);
   // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
   if(event.target.id !== 'allMovies-Container'){
     const moviePlayerContainer = document.getElementById('trailer');
-    moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovie[multiIndexOf(event.target.alt)].mainImage})`;
-    moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[multiIndexOf(event.target.alt)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
+    moviePlayerContainer.style.backgroundImage = `url(${Movies.allMovie[multiIndexOf(event.target.id)].mainImage})`;
+    moviePlayerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[multiIndexOf(event.target.id)].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>`;
     topFunction();
   }
 });

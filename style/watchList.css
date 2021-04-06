@@ -1,3 +1,4 @@
+
 .list-section {
     position: relative;
     border: 5px solid #000000a8;
@@ -61,6 +62,7 @@ button.moreInfo {
 button.moreInfo:hover{
     background-color: #e7658c;
 }
+
 header{
     position: fixed;
     top: 0;
@@ -74,7 +76,6 @@ header{
     height: 67px;
     background-color: black;
 }
-
 header .logo2{
     position: relative;
     font-weight: 700;
@@ -95,7 +96,6 @@ header.sticky .logo2{
     left: 9px;
    
 }
-
 header ul{
     position: relative;
     display: flex;
@@ -103,19 +103,14 @@ header ul{
     align-items: center;
     right: 80px;
     top: 10px;
-
 }
 header.sticky ul{
-
     top: 0;
-
 }
-
 header ul li{
     position: relative;
     list-style: none;
 }
-
 header ul li a{
     position: relative;
     margin:  0 15px;
@@ -126,22 +121,15 @@ header ul li a{
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.5s;
-
     font-weight: 600;
 }
 header ul li a:hover{
     color: #e75480;
 }
-
-
 header.sticky{
-   
     background: #40373796;
     box-shadow: 0px 6px 4px #2727273d;
-    
-
 }
-
 header.sticky ul li a {
      color: black;
      font-weight: 600;
@@ -149,7 +137,6 @@ header.sticky ul li a {
 header.sticky ul li a:hover {
     color: #e75480;
 }
-
 .containar div{
     width: 50%;
     margin-left: 170px;
@@ -157,24 +144,20 @@ header.sticky ul li a:hover {
     background-color:black;
     margin-top: 20vh;
     animation: pulse 5s infinite;
-
 }
 .containar div img{
     width: 100%;
     height: 100%;
     animation: pulse 5s infinite;
-    
 }
 
 .currentLink {
    color: #640200;
    background-color: #000000;
 } */
-
 .display{
     display: none;
 }
-
   @keyframes pulse{
     0%{
         box-shadow: 0 0 0 0 #e75480;
@@ -200,8 +183,196 @@ div#watchlist {
 div#watchlist h1{
     font-size: 55px;
 }
-html{
-    background-color: #afafafb3;
+#myPage a{
+    color: #e75480;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/* html, body{
+    margin: 0;
+    background: black;
+    font-family: 'Montserrat', helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  } */
+  .movie_card{
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 350px;
+    margin: 100px auto; 
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+  }
+.movie_card:hover{
+      transform: scale(1.02);
+      transition: all 0.4s;
+}
+
+.info_section{
+ position: relative;
+ width: 100%;
+ height: 100%;
+  background-blend-mode: multiply;
+ z-index: 2;
+ border-radius: 10px;
+}
+.movie_header{
+  position: relative;
+  padding: 25px;
+  height: 40%;
+}
+.movie_header h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+.movie_header h4{
+    color: #9ac7fa;
+    font-weight: 400;
+    font-size: 18px;
+ }
+.minutes{
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.13);
+ }
+ .type{
+  display: inline-block;
+  color: #cee4fd;
+  margin-left: 10px;
+  font-size: 19px;
+}
+.locandina{
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  height: 170px;
+  box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+}
+.movie_desc{
+  padding: 25px;
+  height: 50%;
+}
+.text{
+    color: #cfd6e1;
+    font-size: 19px;
+  }
+  .movie_social{
+    height: 10%;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+  .blur_back{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%; right: 0;
+    background-size: cover;
+    border-radius: 11px;
+  }
+  @media screen and (min-width: 768px) {
+    .movie_header{
+      width: 60%;
+    }
+    
+    .movie_desc{
+      width: 50%;
+    }
+    
+    .info_section{
+      background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    }
+    
+    .blur_back{
+      width: 80%;
+      background-position: -100% 10% !important;  
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .movie_card{
+      width: 95%;
+      margin: 70px auto; 
+      min-height: 350px;
+      height: auto;
+    }
+  }
+  .blur_back{
+    width: 100%;
+    background-position: 32% 50% !important;  
+  }
+  
+  .movie_header{
+    width: 100%;
+    /* margin-top: 85px; */
+  }
+  
+  .movie_desc{
+    position: relative;
+    width: 76%;
+    bottom: 48px;
+  }
+  
+  .info_section{
+    /* background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%); */
+    display: inline-grid;
+  }
+  
+#bright{
+    box-shadow: 9px 7px 4px #6c6c6c;
+}
+  box-shadow:hover{
+    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  }
+
+
+/* .bright_back{
+  background: url('../img/covers/Dracula.jpg');
+} */
+button.remove {
+  position: absolute;
+  bottom: 14px;
+  width: 89px;
+  height: 31px;
+  right: 19px;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #000000;
+  /* border: 2px solid pink; */
+  font-weight: 700;
+}
+button.remove:hover {
+  background-color: #e7658c;
+}
+button.moreInfo {
+  position: absolute;
+  bottom: 14px;
+  width: 89px;
+  height: 31px;
+  right: 133px;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #000000;
+  /* border: 2px solid pink; */
+  font-weight: 700;
+} 
+button.moreInfo:hover{
+  background-color: #e7658c;
 }
 .hero {
   display: grid;
