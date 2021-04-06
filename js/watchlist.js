@@ -7,7 +7,7 @@
 
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
-//image,description,URL
+//image,description,URLz
 window.addEventListener('scroll',()=>{
   let header = document.querySelector('header');
   header.classList.toggle('sticky',window.scrollY > 0);
