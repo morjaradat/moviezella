@@ -83,7 +83,7 @@ trinding.sort(compare);
 
 for (let i = 0; i < 4; i++) {
 
-
+// 
 
     let html = `
                     <div class="card movie_card">
