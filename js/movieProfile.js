@@ -1,6 +1,6 @@
 let id = localStorage.getItem('profileId');
 
-document.write(id);
+// document.write(id);
 
 let profile = [];
 
@@ -9,7 +9,7 @@ for(let i = 0 ; i < Movies.allMovie.length ; i++){
     profile.push(Movies.allMovie[i]);
   }
 }
-console.log(profile);
+// console.log(profile);
 
 
 
@@ -18,10 +18,10 @@ let container = document.getElementById('container');
 
 
 let cata = profile[0].category.split(' ');
-document.getElementById("hero2").style.background = `url(${profile[0].mainImage})`;
+// document.getElementById("hero2").style.background = `url(${profile[0].mainImage})`;
 
 
-console.log(cata);
+// console.log(cata);
 let html = `<div class="container">
 
 <a href="#"><img src="${profile[0].profileImage}" height="350px" alt="cover" class="cover" /></a>
@@ -135,10 +135,20 @@ container.innerHTML = html;
 
 const watchSection=document.getElementById('watchlist');
 watchSection.addEventListener('click',add);
-function add(event){
-  watchListArray.push(profile);
-  savedMovie=JSON.stringify(watchListArray);
-  localStorage.setItem('watchList', savedMovie);
-  console.log(watchListArray);
+function add(){
+  
+    if(!watchListArray.includes(profile[0])){
+                console.log(watchListArray);
+
+        watchListArray.push(profile[0]);
+        console.log(watchListArray);
+        let localArray = JSON.stringify(watchListArray);
+        localStorage.setItem('watchlist',localArray)
+        // let movies = JSON.parse(localStorage.getItem("watchlist") || "[]");
+
+        // console.log(movies)
+    }
+//   console.log(watchListArray)
 }
+
 // localStorage.setItem('watchList', JSON.stringify(this.items))

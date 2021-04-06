@@ -4,7 +4,9 @@
 // let watchListLibary = localStorage.getItem(JSON.parse(''));
 // the key name in local storage
 
+let movieslist = JSON.parse(localStorage.getItem('watchlist'));
 
+console.log(movieslist)
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
 //image,description,URLz
@@ -24,7 +26,7 @@ function Watchlist(name,rate,categories,image){
   Watchlist.all.push(this);
 }
 Watchlist.all=[];
-console.log(Watchlist.all);
+// console.log(Watchlist.all);
 // {<div class="movie_card" id="bright">
 //   <div class="info_section">
 //     <div class="movie_header">
