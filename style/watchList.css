@@ -427,6 +427,11 @@ button.moreInfo:hover{
     
 }
 .media a{
+
+    color: black;}
+
+   
+
     color: rgb(255, 255, 255);
     font-size: 35px;
     padding: 7px;
@@ -439,6 +444,7 @@ button.moreInfo:hover{
   border: 1px solid #ffc0cb00;
   border-radius: 17px;
 }
+
 
 
 
