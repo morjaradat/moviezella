@@ -15,10 +15,9 @@ for(let i = 0 ; i < Movies.allMovie.length ; i++){
 
 
 let container = document.getElementById('container');
-
+console.log(profile[0]);
 
 let cata = profile[0].category.split(' ');
-// document.getElementById("hero2").style.background = `url(${profile[0].mainImage})`;
 
 
 // console.log(cata);
@@ -88,10 +87,10 @@ let html = `<div class="container">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
                                     src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
 
-                        <td><a href="#">${profile[0].actors[0]}</a> </td>
+                        <td>${profile[0].actors[0]} </td>
 
                         <td class="character">
-                            <a href="#">${profile[0].caractors[0]}</a>
+                            ${profile[0].caractors[0]}
                         </td>
                     </tr>
 
@@ -99,10 +98,10 @@ let html = `<div class="container">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
                                     src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
 
-                        <td><a href="#">${profile[0].actors[1]}</a> </td>
+                        <td>${profile[0].actors[1]} </td>
 
                         <td class="character">
-                            <a href="#">${profile[0].caractors[1]}</a>
+                            ${profile[0].caractors[1]}
                         </td>
                     </tr>
 
@@ -110,17 +109,16 @@ let html = `<div class="container">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
                                     src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
 
-                        <td><a href="#">${profile[0].actors[2]}</a></td>
+                        <td>${profile[0].actors[2]}</td>
 
                         <td class="character">
-                            <a href="#">${profile[0].caractors[2]}</a>
+                            ${profile[0].caractors[2]}
                         </td>
                     </tr>
                 </tbody>
 
             </table>
-
-
+          
         </div>
     </div>
 
@@ -131,6 +129,7 @@ let html = `<div class="container">
 
 container.innerHTML = html;
 
+document.getElementById("hero2").style.background =`url(${profile[0].mainImage})`;
 
 
 const watchSection=document.getElementById('watchlist');

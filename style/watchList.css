@@ -446,6 +446,115 @@ button.moreInfo:hover{
 }
 
 
+}
+
+/* footer ///////////////////////// */
+
+footer{
+  background-color: black;
+  color: rgb(214, 25, 25);
+  width: 100%;  
+  /* justify-content: center; */
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.log00{
+  width: 15%;
+  margin-bottom: 30px;
+  /* margin-top: 10%; */
+
+}
+
+footer h1{
+  color: #e75480 ;
+}
+
+.copy{
+  position: absolute;
+  left: 1060px;
+  top:  2150px;
+}
+
+.footerMain{
+  position: absolute;
+  left: 300px;
+  top:  2075px;
+  
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.footerMain h5 a{
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: rgb(255, 255, 255);
+
+}
 
 
+.footerMainh1{
+  position: absolute;
+  left: 275px;
+  top:  2040px;
+  font-size: 20px;
+}
 
+.footerFollowh5{
+  position: absolute;
+  left: 700px;
+  top:  2085px;
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  /* text-transform: uppercase; */
+}
+
+.footerFollowh5 h5 a{
+  text-decoration: none;
+  color: white;
+  /* text-transform: uppercase; */
+
+}
+
+.footerFollowh1{
+  position: absolute;
+  left: 690px;
+  top:  2040px;
+  font-size: 20px;
+}
+
+.footerContacth5{
+  position: absolute;
+  left: 1050px;
+  top:  2080px;
+  color: #fff;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.footerContacth1{
+  position: absolute;
+  left: 1130px;
+  top:  2040px;
+  font-size: 20px;
+}
