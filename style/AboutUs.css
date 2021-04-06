@@ -723,23 +723,118 @@ position: relative;
     margin-left: 130px;
     margin-top: 70px;
 }
- 
-/* 
-.ameen{
+
+
+
+ /* footer footer footer footerfooter footerfooterfooterfooterfooterfooterfooterfooter */
+
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;  
+    /* justify-content: center; */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.log00{
+    width: 15%;
+    margin-bottom: 30px;
+
+}
+
+footer h1{
+    color: #e75480 ;
+}
+
+.copy{
     position: absolute;
-    left: 500px;
-} */
-/* 
-.cardWrapper{
+    left: 1190px;
+    top:  2550px;
+}
 
-    width: 70% !important;
-    height: 70% !important;
+.footerMain{
+    position: absolute;
+    left: 370px;
+    top:  2480px;
 
-    margin: 3rem !important;
-    padding: auto !important;
-    display:  !important;
-    /* position: absolute;
-    right: 40rem; */
-/* }
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-block */ 
+    text-decoration: none;
+}
+
+.footerMain h5 a{
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: white;
+}
+
+
+.footerMainh1{
+    position: absolute;
+    left: 345px;
+    top:  2425px;
+    font-size: 20px;
+}
+
+.footerFollowh5{
+    position: absolute;
+    left: 770px;
+    top:  2480px;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* text-decoration: none; */
+    /* text-transform: uppercase; */
+}
+
+.footerFollowh5 h5 a{
+    text-decoration: none;
+    color: white;
+    /* text-transform: uppercase; */
+
+}
+
+.footerFollowh1{
+    position: absolute;
+    left: 760px;
+    top:  2425px;
+    font-size: 20px;
+}
+
+.footerContacth5{
+    position: absolute;
+    left: 1180px;
+    top:  2480px;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.footerContacth1{
+    position: absolute;
+    left: 1250px;
+    top:  2425px;
+    font-size: 20px;
+}
+
+ /* footer footer footer footerfooter footerfooterfooterfooterfooterfooterfooterfooter */
+
+
