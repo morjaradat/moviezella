@@ -1,15 +1,15 @@
 let id = localStorage.getItem('profileId');
 
-document.write(id)
+document.write(id);
 
-let profile = []
+let profile = [];
 
 for(let i = 0 ; i < Movies.allMovie.length ; i++){
-    if(Movies.allMovie[i].id == id){
-        profile.push(Movies.allMovie[i])
-    }
+  if(Movies.allMovie[i].id == id){
+    profile.push(Movies.allMovie[i]);
+  }
 }
-console.log(profile)
+console.log(profile);
 
 
 
@@ -20,12 +20,12 @@ let container = document.getElementById('container');
 let cata = profile[0].category.split(' ');
 
 
-console.log(cata)
+console.log(cata);
 let html = `<div class="container">
 
 <a href="#"><img src="${profile[0].profileImage}" height="350px" alt="cover" class="cover" /></a>
 
-<div class="hero">
+<div class="hero" >
 
     <div class="details">
 
@@ -72,8 +72,7 @@ let html = `<div class="container">
 
     <div class="column2">
 
-        <p>A new theme park, built on the original site of Jurassic Park, creates a genetically modified
-            hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree.
+        <p>${profile[0].intro}
         </p>
         <p><span class="bold">Director:</span> <a href="#">Colin Trevorrow </a></p>
         <p><span class="bold">Writers:</span><a href="#">Rick Jaffa, Amanda Silver</a> </p>
@@ -126,7 +125,8 @@ let html = `<div class="container">
 
 
 </div>
-</div>`
+</div>`;
 
 
-container.innerHTML = html
+container.innerHTML = html;
+
