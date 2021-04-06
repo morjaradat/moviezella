@@ -7,6 +7,7 @@ let allMovies = [
     pathIds:'-FZ-pPFAjYY',
     coverImg : 'Batman.jpg',
     actors : ['Robert Pattinson','Andy Serkis','Amber Sienna'],
+    caractors : ['BatMan','Alfred Pennyworth','Selina Kyle'],
     views:555,
     rate : 5,
     year : '2021'
@@ -86,7 +87,7 @@ let allMovies = [
   {
     id:8,
     name : 'Pulp Fiction',
-    categories :' Crime Drama',
+    categories :'Action Crime Drama',
     Duration: '2h34m',
     pathIds: '5ZAhzsi1ybM',
     coverImg : 'Pulp-Fiction.jpg',
@@ -182,7 +183,7 @@ let allMovies = [
 
 ];
 // Movies constructor
-function Movies(id,name,category,duration,pathIds,mainImage,year,actors){
+function Movies(id,name,category,duration,pathIds,mainImage,year,actors,caractors){
   this.id = id
   this.name = name;
   this.mainImage = `../img/covers/${mainImage}`;
@@ -191,7 +192,8 @@ function Movies(id,name,category,duration,pathIds,mainImage,year,actors){
   this.category = category;
   this.duration = duration;
   this.actors = actors;
-  this.year = year
+  this.year = year;
+  this.caractors=caractors
   this.actors = actors
   this.rate = randomRate(5,1);
   this.views = randomViews(10000,1000);
@@ -206,7 +208,7 @@ console.log(Movies.allMovie)
 // creating a function that will generate movie objects & assign path & category
 function generateMovies(){
   for(let i=0; i<allMovies.length; i++){
-    new Movies(allMovies[i].id,allMovies[i].name,allMovies[i].categories,allMovies[i].Duration,allMovies[i].pathIds,allMovies[i].coverImg,allMovies[i].year,allMovies[i].actors);
+    new Movies(allMovies[i].id,allMovies[i].name,allMovies[i].categories,allMovies[i].Duration,allMovies[i].pathIds,allMovies[i].coverImg,allMovies[i].year,allMovies[i].actors,allMovies[i].caractors);
   }
   // console.log(Movies.allMovie);
 }
