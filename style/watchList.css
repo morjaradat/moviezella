@@ -185,6 +185,7 @@ div#watchlist h1{
 }
 #myPage a{
     color: #e75480;
+    font-size: 20px;
 }
 
 *{
@@ -413,25 +414,37 @@ button.moreInfo:hover{
     margin-right: 15px;
   }
   .heroTitle {
-    font-size: 3.5rem;
+    font-size: 86px;
     position: relative;
     top: -15rem;
     color: rgb(250, 250, 250);
-    font : bold;
-    display: grid;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.7777485994);
   }
 .media{
-    position: relative;
-    top: -30rem;
-    left: 73rem;
+  position: absolute;
+  top: 130px;
+    left: 78rem;
+    display: grid;
     
 }
 .media a{
+
     color: black;}
 
    
+
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    padding: 7px;
+    text-decoration: none;
+}
+.media a:hover {
+  
+  background-color: cornflowerblue;
+  padding: 7px;
+  border: 1px solid #ffc0cb00;
+  border-radius: 17px;
+}
+
 
 
 
