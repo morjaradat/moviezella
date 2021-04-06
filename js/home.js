@@ -180,7 +180,7 @@ for(let i = 0 ; i < id_profile.length;i++){
 
 function storege(e){
     let id = e.target.id;
-
+    
     localStorage.setItem('profileId',id);
 
     window.location = '../pages/movieProfile.html'

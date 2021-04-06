@@ -260,6 +260,7 @@ function Movies(id,name,category,duration,pathIds,mainImage,year,actors,caractor
 Movies.allMovie = [];
 
 generateMovies();
+
 // creating a function that will generate movie objects & assign path & category
 function generateMovies(){
   for(let i=0; i<allMovies.length; i++){
