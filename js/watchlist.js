@@ -15,11 +15,15 @@ window.addEventListener('scroll',()=>{
   header.classList.toggle('sticky',window.scrollY > 0);
 });
 
-function Watchlist(name,rate,categories,image){
+function Watchlist(name,date,actor,time,categories,description,mainImage,coverImage){
   this.name=name;
-  this.rate=rate;
+  this.date=date;
+  this.actor=actor;
+  this.time=time;
   this.categories=categories;
-  this.image=image;
+  this.description=description;
+  this.mainImage=mainImage;
+  this.coverImage=coverImage;
   // this.URL=URL;
 
 
@@ -75,25 +79,25 @@ Watchlist.prototype.render=function(){
   let movieImg= document.createElement('img');
   divEle3.appendChild(movieImg);
   movieImg.setAttribute('class','locandina');
-  movieImg.src=`${this.image}`; /// ---- small movie image
+  movieImg.src=`${this.mainImage}`; /// ---- small movie image
 
   let h1Ele=document.createElement('h1');
   divEle3.appendChild(h1Ele);
-  h1Ele.textContent='movie'; ///--------- movie name
+  h1Ele.textContent=`${this.name}`; ///--------- movie name
 
   let h4Ele=document.createElement('h4');
   divEle3.appendChild(h4Ele);
-  h4Ele.textContent='2019 | aaa'; ///--------- date and main actor
+  h4Ele.textContent=`${this.time} | ${this.actor} `; ///--------- date and main actor
 
   let spanEle = document.createElement('span');
   divEle3.appendChild(spanEle);
   spanEle.setAttribute('class','minutes');
-  spanEle.textContent='119 min';///----------- time
+  spanEle.textContent=`${this.time}`;///----------- time
 
   let paraEle1=document.createElement('p');
   divEle3.appendChild(paraEle1);
   paraEle1.setAttribute('class','type');
-  paraEle1.textContent='action , comedy'; ///-------------categories
+  paraEle1.textContent=`${this.categories}`; ///-------------categories
 
 
   let divEle4=document.createElement('div');
@@ -103,7 +107,7 @@ Watchlist.prototype.render=function(){
   let paraEle2=document.createElement('p'); ///-------------descreption
   divEle4.appendChild(paraEle2);
   paraEle2.setAttribute('class','text');
-  paraEle2.textContent='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur doloremque sapiente ducimus, aliquid minima vero blanditiis sequi ea nisi dolorem illum et nesciunt quod porro voluptates. Magnam tempora quidem cumque!';
+  paraEle2.textContent= `${this.description}`;
 
   let divEle5=document.createElement('div');
   divEle5.className='button_section';
@@ -114,15 +118,16 @@ Watchlist.prototype.render=function(){
   divEle5.appendChild(removeButtom);
   removeButtom.textContent='Remove';
 
-  removeButtom.addEventListener('click',remove);
+  removeButtom.addEventListener('click',remove); //----- remove function 
   function remove(){
     container.removeChild(liEle);
+   
   }
 
-  let infoButtom=document.createElement('button');
-  infoButtom.className='moreInfo';
-  divEle5.appendChild(infoButtom);
-  infoButtom.textContent='VIEW INFO';
+  // let infoButtom=document.createElement('button');
+  // infoButtom.className='moreInfo';
+  // divEle5.appendChild(infoButtom);
+  // infoButtom.textContent='VIEW INFO';
   // infoButtom.addEventListener('click',info);
   // function info(){
   //   container.removeChild(liEle);
@@ -131,14 +136,13 @@ Watchlist.prototype.render=function(){
   divEle6.className='blur_back bright_back';
   divEle1.appendChild(divEle6);
   document.getElementsByClassName('blur_back bright_back');
-  divEle6.style.background=`url(${this.image})`;
+  divEle6.style.background=`url(${this.coverImage})`;
 };
 
-const newMoive = new Watchlist('movie',8.1,'action','../img/Dracula-Untold.jpg');
-newMoive.render();
+for (let i = 0; i < movieslist.length; i++) {
 
-const test =new Watchlist('fly',7,'Adventure','../img/arrival.jpg');
-test.render();
+  const newMoive = new Watchlist(movieslist[i].name,movieslist[i].year,movieslist[i].actors[1],movieslist[i].duration,movieslist[i].category,movieslist[i].intro,movieslist[i].profileImage,movieslist[i].mainImage);
+  newMoive.render();
+  
+}
 
-const test2=new Watchlist('Education', 8.5 , 'Education','../img/detachment.jpg');
-test2.render();
