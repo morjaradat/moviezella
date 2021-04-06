@@ -3,6 +3,8 @@ html{
     scroll-behavior: smooth;
 }
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 /* Header style */
 header{
     position: fixed;
@@ -14,13 +16,12 @@ header{
     align-items: center;
     transition: 0.6s;
     z-index: 2222;
-    background-color: rgb(0 0 0 / 54%);
-    height: 40px;
 }
+
 header .logo2{
     position: relative;
     font-weight: 700;
-    top: 4px;
+    top: 10px;
     left: 10px;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
@@ -31,19 +32,37 @@ header .logo2{
     letter-spacing: 2px;
     transition: 0.6s;
 }
+header.sticky .logo2{
+    color: black;
+    top: 0;
+    left: 0;
+}
+header.sticky2 .logo2{
+    color: whitesmoke;
+    top: 0;
+    left: 0;
+}
+
 header ul{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     right: 80px;
-    top: 9px;
+    top: 10px;
 
 }
+header.sticky ul{
+
+    top: 0;
+
+}
+
 header ul li{
     position: relative;
     list-style: none;
 }
+
 header ul li a{
     position: relative;
     margin:  0 15px;
@@ -58,14 +77,35 @@ header ul li a{
 header ul li a:hover{
     color: #e75480;
 }
+
+
+header.sticky{
+    padding:  5px 10px;
+    background: #fff;
+}
+header.sticky2{
+    padding:  5px 10px;
+    background: #000;
+}
+
+header.sticky ul li a {
+     color: black;
+}
+header.sticky2 ul li a {
+    color: #fff;
+}
+header.sticky ul li a:hover {
+    color: #e75480;
+}
 #myPage a{
     color: #e75480;
+    font-size: 1.3rem;
 }
 
 /* Main style */
 main{
     width: 100%;
-    height: 800px;
+    height: 100%;
 }
 #preview{
     position: relative;
@@ -122,48 +162,103 @@ main{
     margin-right: auto;
 }
 .movies-container{
-    border: 1px solid #e75480;
-    background-color: #e75480;
-    width: fit-content;
-    height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    box-shadow: 5px 5px 25px;
+    padding: 0 !important;
+    width: 15rem;
+    margin:14px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    animation: pulse 2s infinite;
+    height: 427px;
 }
 .movies-container img{
-    width: 240px;
-    height: 320px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 96%, 0 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 20rem;
+    width: 100%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -58px;
 }
 .details .title{
     font-family: 'Oswald', sans-serif;
-    font-size: 16pt;
-    color: white;
-    margin-left: 2px
+    font-size: 15pt;
+    color: #212529;
+    height: 1rem;
+    margin-top: 10px;
+    margin-bottom: .75rem;
+    text-align: center;
+}
+.play_button{
+    background-color: #ff3d49;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: 175px;
+    bottom: -12px;
+    font-size: 27px;
+    padding-left: 21px;
+    padding-top: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .play_button i::before{
+    content: "\f04b";
+    position: relative;
+    top: 2px
+  }
+  .fa-star:before {
+    content: "\f005";
+    color: #ff3d49;
+}
+.rate i{
+    font-size: 20px;
+    color: #5e5c5c;
 }
 .category{
-    border: 1px solid #e75480;
-    border-radius: 3%;
-    width: fit-content;
-    background-color: #ffeb3b;
-    color: black;
-    font-size: 11pt;
-    margin: 5px 0;
-    font-family: 'Ubuntu Mono', monospace;
-    box-shadow: 1px 1px 8px;
-    margin-left: 2px
+    color: #5e5c5c;
+    margin: -3px 4px;
+    font-weight: 500;
 }
-.rate, .view{
-    font-size: 12pt;
-    width: fit-content;
-    color: white;
-    font-family: 'Ubuntu Mono', monospace;
-    margin-left: 2px
+.randoms{
+    margin: 8px -1px;
 }
+.time{
+    margin: 1px 2px;
+}
+.year{
+    color: #5e5c5c;
+    width: fit-content;
+    margin: 0px 91px 0 5px;
+} 
+.duration{
+    color: #5e5c5c;
+    width: fit-content;
+    margin-left: 56px;
+}
+.rate{
+    color: #5e5c5c;
+    width: fit-content;
+} 
+.view{
+    color: #5e5c5c;
+    width: fit-content;
+    margin: 0px 91px 0 5px;
+}
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 #e75480;
+    }
+    70%{
+        box-shadow: 0 0 0 3px #e75480;
+
+    }
+   
+}  
 /* //////////////////////////////////////// */
 /* span a{
     text-decoration: none;
@@ -202,7 +297,11 @@ main{
 /* footer style */
 footer{
     width: 100%;
+    position: relative;
+    top: 9rem;
+    left: 1rem;
 }
+
 @media screen and (min-width: 700px){
     #allMovies-Container{
         flex-direction: row;

@@ -201,7 +201,7 @@ Movies.allMovie = [];
 
 generateMovies()
 
-console.log(Movies.allMovie)
+// console.log(Movies.allMovie)
 
 // creating a function that will generate movie objects & assign path & category
 function generateMovies(){

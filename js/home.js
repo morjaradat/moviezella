@@ -1,11 +1,11 @@
 'use strict'
 window.addEventListener('scroll', () => {
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0);
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
 });
 window.addEventListener('scroll', () => {
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky2', window.scrollY > 500);
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky2', window.scrollY > 500);
 })
 
 
@@ -24,20 +24,20 @@ window.addEventListener('load', () => {
 
     
 
-    setInterval(() => {
-        index += 1;
-        if (index < 3) {
-            image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
-            image.setAttribute('class', `fade-in`)
-            movieName.textContent = Movies.allMovie[index].name;
-            categories.textContent = `${Movies.allMovie[index].category} | Duration: ${Movies.allMovie[index].duration}`;
-        } else {
-            index = -1
-            image.setAttribute('src', `img/covers/WrathOfTheTitans.jpg`)
-            movieName.textContent = 'Wrath OF THE TITANS';
-            categories.textContent = 'Fantasy Family Drama | Duration: 1h50m ';
-        }
-    }, 5000);
+  setInterval(() => {
+    index += 1;
+    if (index < 3) {
+      image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
+      image.setAttribute('class', `fade-in`)
+      movieName.textContent = Movies.allMovie[index].name;
+      categories.textContent = `${Movies.allMovie[index].category} | Duration: ${Movies.allMovie[index].duration}`;
+    } else {
+      index = -1
+      image.setAttribute('src', `img/covers/WrathOfTheTitans.jpg`)
+      movieName.textContent = 'Wrath OF THE TITANS';
+      categories.textContent = 'Fantasy Family Drama | Duration: 1h50m ';
+    }
+  }, 5000);
 
 });
 
@@ -46,13 +46,13 @@ let trendBtn = document.getElementById('trend');
 let rate = document.getElementById('rate');
 
 rate.addEventListener('click',()=>{
-    document.getElementById("trendcardsContainer").style.display = "none";
-    document.getElementById("ratingcardsContainer").style.display = "flex";
+  document.getElementById("trendcardsContainer").style.display = "none";
+  document.getElementById("ratingcardsContainer").style.display = "flex";
 })
 
 trendBtn.addEventListener('click',()=>{
-    document.getElementById("trendcardsContainer").style.display = "flex";
-    document.getElementById("ratingcardsContainer").style.display = "none";
+  document.getElementById("trendcardsContainer").style.display = "flex";
+  document.getElementById("ratingcardsContainer").style.display = "none";
 })
 
 
@@ -69,13 +69,13 @@ const ratingcardsContainer = document.getElementById('ratingcardsContainer');
 let trinding = [...Movies.allMovie]
 
 function compare(a, b) {
-    if (a.views < b.views) {
-        return 1;
-    }
-    if (a.views > b.views) {
-        return -1;
-    }
-    return 0;
+  if (a.views < b.views) {
+    return 1;
+  }
+  if (a.views > b.views) {
+    return -1;
+  }
+  return 0;
 }
 
 trinding.sort(compare);
@@ -83,9 +83,9 @@ trinding.sort(compare);
 
 for (let i = 0; i < 4; i++) {
 
-// 
+  // 
 
-    let html = `
+  let html = `
                     <div class="card movie_card">
                         <img src="${trinding[i].profileImage}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -98,7 +98,7 @@ for (let i = 0; i < 4; i++) {
                     </div>
                 `
 
-    trendcardsContainer.innerHTML += html
+  trendcardsContainer.innerHTML += html
 
 }
 
@@ -108,13 +108,13 @@ for (let i = 0; i < 4; i++) {
 let rating = [...Movies.allMovie]
 
 function comparerate(a, b) {
-    if (a.rate < b.rate) {
-        return 1;
-    }
-    if (a.rate > b.rate) {
-        return -1;
-    }
-    return 0;
+  if (a.rate < b.rate) {
+    return 1;
+  }
+  if (a.rate > b.rate) {
+    return -1;
+  }
+  return 0;
 }
 
 rating.sort(comparerate)
@@ -122,7 +122,7 @@ for (let i = 0; i < 4; i++) {
 
 
 
-    let html = `<div class="card movie_card">
+  let html = `<div class="card movie_card">
                     <img src="${rating[i].profileImage}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <i class="fas fa-play play_button" id="${rating[i].id}" data-toggle="tooltip" data-placement="bottom" title="profile"></i>
@@ -132,7 +132,7 @@ for (let i = 0; i < 4; i++) {
                     </div>
                 </div>`
 
-    ratingcardsContainer.innerHTML += html
+  ratingcardsContainer.innerHTML += html
 
 }
 
@@ -156,14 +156,14 @@ const items = document.querySelectorAll('.rating-Item');
 
 
 ratingbox.addEventListener('click', (e) => {
-    const elClass = e.target.classList;
-    if (!elClass.contains('active')) {
-        items.forEach(item => {
-            item.classList.remove('active')
-        });
-        elClass.add('active');
-    }
-    console.log(e.target.classList);
+  const elClass = e.target.classList;
+  if (!elClass.contains('active')) {
+    items.forEach(item => {
+      item.classList.remove('active')
+    });
+    elClass.add('active');
+  }
+  console.log(e.target.classList);
 });
 
 
