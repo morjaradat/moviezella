@@ -172,19 +172,19 @@ ratingbox.addEventListener('click', (e) => {
 
 // passing the movie profile Id 
 
-// let id_profile = document.querySelectorAll('.fa-play');
+let id_profile = document.querySelectorAll('.fa-play');
 
-// for(let i = 0 ; i < id_profile.length;i++){
-//     id_profile[i].addEventListener('click',storege);
-// }
+for(let i = 0 ; i < id_profile.length;i++){
+    id_profile[i].addEventListener('click',storege);
+}
 
-// function storege(e){
-//     let id = e.target.id;
+function storege(e){
+    let id = e.target.id;
 
-//     localStorage.setItem('profileId',id);
+    localStorage.setItem('profileId',id);
 
-//     window.location = '../pages/movieProfile.html'
-// }
+    window.location = '../pages/movieProfile.html'
+}
 
 // passing the movie profile Id 
 
