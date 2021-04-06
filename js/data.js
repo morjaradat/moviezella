@@ -1,3 +1,31 @@
+users = JSON.parse(localStorage.getItem("watchlist"));
+
+// console.log(users);
+let watchListArray=[];
+
+if(users === null){
+  users = [  {
+    id:1,
+    name : 'The Batman',
+    categories :'Action Crime Drama',
+    Duration: '2h20m',
+    pathIds:'-FZ-pPFAjYY',
+    coverImg : 'Batman.jpg',
+    actors : ['Robert Pattinson','Andy Serkis','Amber Sienna'],
+    caractors : ['BatMan','Alfred Pennyworth','Selina Kyle'],
+    intro:'Eight years after the Jokers reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.',
+    views:555,
+    rate : 5,
+    year : '2021'
+  }]
+}else{
+  watchListArray = [...users]
+}
+
+
+
+
+
 let allMovies = [
   {
     id:1,
@@ -232,8 +260,6 @@ function Movies(id,name,category,duration,pathIds,mainImage,year,actors,caractor
 Movies.allMovie = [];
 
 generateMovies();
-
-// console.log(Movies.allMovie)
 
 // creating a function that will generate movie objects & assign path & category
 function generateMovies(){
