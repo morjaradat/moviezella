@@ -9,7 +9,7 @@ for(let i = 0 ; i < Movies.allMovie.length ; i++){
     profile.push(Movies.allMovie[i]);
   }
 }
-console.log(profile);
+// console.log(profile);
 
 
 
@@ -20,7 +20,7 @@ let container = document.getElementById('container');
 let cata = profile[0].category.split(' ');
 
 
-console.log(cata);
+// console.log(cata);
 let html = `<div class="container">
 
 <a href="#"><img src="${profile[0].profileImage}" height="350px" alt="cover" class="cover" /></a>
