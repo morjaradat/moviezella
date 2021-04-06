@@ -5,26 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/movieProfile.css">
 </head>
 <body>
+    
+    <header>
+        <a href="#" class="logo2">MoviesZella</a>
+        <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">All Movies</a> </li>
+            <li> <a href="#">Actors</a> </li>
+            <li> <a href="/pages/watchList.html">Watch List</a> </li>
+            <li> <a href="#">About Us</a> </li>
+        </ul>
+    </header>
 
 
-    <script src="/js/data.js" ></script>
-    <script  >
-
-        let id = localStorage.getItem('profileId');
-
-        document.write(id)
-
-        let profile = []
-
-        for(let i = 0 ; i < Movies.allMovie.length ; i++){
-            if(Movies.allMovie[i].id == id){
-                profile.push(Movies.allMovie[i])
-            }
-        }
-        console.log(profile)
-
-    </script>
+   <div class="movie-card">
+  
+        <div class="container">
+          
+          <a href="#"><img src="/img/movieprofile/park.jpg" height="350px" alt="cover" class="cover" /></a>
+              
+          <div class="hero">
+                  
+            <div class="details">
+            
+              <div class="title1">Jurassic World <span>PG-13</span></div>
+      
+              <div class="title2">The Lost World</div>    
+              
+              <fieldset class="rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+          <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+          <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+          <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+          <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+          <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+          <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+              
+              <!-- <span class="likes">109 likes</span> -->
+              
+            </div> <!-- end details -->
+            
+          </div> <!-- end hero -->
+          
+          <div class="description">
+            
+            <div class="column1">
+              <span class="tag">action</span>
+              <span class="tag">fantasy</span>
+              <span class="tag">adventure</span>
+            </div> <!-- end column1 -->
+            
+            <div class="column2">
+              
+              <p>A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree.
+               </p>
+              <p><span class="bold">Director:</span> <a href="#">Colin Trevorrow </a></p>
+              <p><span class="bold">Writers:</span><a href="#">Rick Jaffa, Amanda Silver</a> </p>
+              <button id="watchlist">+ Add to Watchlist</button>
+              <div class="article" id="titlecast">
+                <table class="cast_list">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="castlist_label">Cast overview, first billed only:</td>
+                        </tr>
+                        <tr class="odd">
+                            <td class="primary_photo"><a href="#"><img height="44" width="32" src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+         
+                            <td><a href="#">Bob Odenkrik</a> </td>
+         
+                            <td class="character">
+                                <a href="#">Hutch Mansell</a>
+                            </td>
+                        </tr>
+         
+                        <tr class="even">
+                         <td class="primary_photo"><a href="#"><img height="44" width="32" src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+         
+                         <td><a href="#">Bob Odenkrik</a> </td>
+         
+                         <td class="character">
+                             <a href="#">Hutch Mansell</a>
+                         </td>
+                     </tr>
+         
+                     <tr class="odd">
+                         <td class="primary_photo"><a href="#"><img height="44" width="32" src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+         
+                         <td><a href="#">Bob Odenkrik</a> </td>
+         
+                         <td class="character">
+                             <a href="#">Hutch Mansell</a>
+                         </td>
+                     </tr>
+         
+                     <tr class="even">
+                      <td class="primary_photo"><a href="#"><img height="44" width="32" src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+         
+                      <td><a href="#">Bob Odenkrik</a> </td>
+         
+                      <td class="character">
+                          <a href="#">Hutch Mansell</a>
+                      </td>
+                  </tr>
+                    </tbody>
+         
+                </table>
+               
+              
+            </div> <!-- end column2 -->
+          </div> <!-- end description -->
+          
+          
+        </div>
+        </div> <!-- end container -->
+      </div> <!-- end movie-card -->
+<footer>
+    <div class="footer-content">
+        <h3>Moviezella</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione possimus odio sint sapiente laudantium.</p>
+<ul class ="socials">
+    <li><a href = "#"><img src="/img/movieprofile/facebook.png"></a></li>
+    <li><a href = "#"><img src="/img/movieprofile/twitter.png"></li>
+    <li><a href = "#"><img src="/img/movieprofile/instagram.png"></li>
+     <li><a href="#"><i calss="fa fa-linkedin-square"></i></a></li>   
+        
+</ul>
+</div>
+<div class="footer-bottom">
+    <p>copyright &copy;2021 Mviezella</p>
+</div>
+</footer>
 </body>
+
+
 </html>

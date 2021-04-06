@@ -1,0 +1,546 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+header{
+    position: fixed;
+    top: 10;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 2222;
+    background-color: #111;
+}
+
+header .logo2{
+    position: relative;
+    font-weight: 700;
+    top: 10px;
+    left: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header.sticky .logo2{
+    color: black;
+    top: 0;
+    left: 0;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 80px;
+    top: 10px;
+
+}
+header.sticky ul{
+
+    top: 0;
+
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin:  0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #e75480;
+}
+
+
+header.sticky{
+    padding:  5px 10px;
+    background: #fff;
+    /* border-radius: 100% 0% 100% 0% / 0% 20% 50% 20% ;  */
+
+}
+
+header.sticky ul li a {
+     color: black;
+}
+header.sticky ul li a:hover {
+    color: #e75480;
+}
+
+
+*{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.199);
+    width: 900px;
+    width: 100%;
+
+}
+
+div{
+    scale(sx)
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    left: 50px;
+
+    position: relative;
+    
+    top: 8px;
+}
+a:hover {
+        width: 100%;
+
+    text-decoration: underline;
+  }
+
+  .movie-card {
+    width: 100%;
+
+    font: 14px/22px "Lato", Arial, sans-serif;
+    color: #A9A8A3;
+    padding: 40px 0;
+    
+  }
+
+  
+  
+  .container {
+      /* border: black solid; */
+    width: 780px;
+    height: 640px;
+    border-radius: 5px;
+    position: relative;
+    
+  }
+
+  .hero {
+    width: 1000px;
+    height: 342px;  
+    margin:0;
+    position: relative;
+    overflow: hidden;
+    z-index:1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+      
+  }
+  
+  .hero:before {
+    content:'';
+    width:100%; height:100%;
+    position:absolute;
+    overflow: hidden;
+    top:0; left:0;
+    background:red;
+    background: url("/img/movieprofile/jpbground.jpg");
+    z-index:-1;
+   
+    /* transform: skewY(-1deg); */
+    transform-origin:0 0;
+    //chrome antialias fix
+    /* -webkit-backface-visibility: hidden;  */
+    
+  }
+
+  .cover {
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    z-index: 2;
+  }
+
+  .details {
+  
+    padding: 190px 0 0 280px;
+    
+  }
+
+  .title1 {
+      
+    color: white;
+    font-size: 44px;
+    margin-bottom: 13px;
+    position: relative;
+    left: 5px;
+  }
+
+  span {
+    position: absolute;
+    top: 3px;
+    margin-left: 12px;
+    background: #C4AF3D;
+    border-radius: 5px;
+    color: #544C21;
+    font-size: 14px;
+    padding: 0px 4px;
+    
+  }
+
+  .title2 {    
+    color: #C7C1BA;
+    font-size: 23px;    
+    font-weight: 300;
+    margin-bottom: 15px;
+    position: relative;
+    left: 20px;
+  }
+
+  
+  .likes {
+    margin-left: 24px;
+  }
+  
+  .likes:before {
+    content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
+    position: relative;
+    top: 2px;
+    padding-right: 7px;
+  }
+
+}
+
+.description {
+  
+  bottom: 0px;
+  height: 200px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B1B0AC;
+  
+}
+
+.column1 {
+  padding-left: 50px;
+  padding-top: 120px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+
+.tag {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 3px 8px;
+    font-size: 14px;
+    margin-right: 4px;
+    line-height: 35px;
+    cursor: pointer;
+   top: 35px;
+   left: -70px;
+  }
+  
+  .tag:hover {
+    background: #ddd;
+  }
+
+
+.column2 p {
+    position: relative;
+    top: -210px;
+    color: black;
+    font-size: medium;
+}
+
+.column2 {
+    position: relative;
+    padding-left: 41px;
+    padding-top: 30px;
+    margin-left: 20px;
+    width: 500px;
+    float: left;
+    left: 18em;
+    bottom: 10em;
+  }
+
+  
+//star rating stuff via: https://codepen.io/jamesbarnett/pen/vlpkh/
+
+fieldset, label { margin: 0; padding: 0; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  margin-top: 0;
+  font-size: 1em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+//tooltip stuff via: https://codepen.io/peiche/pen/JaftA
+
+a[data-tooltip] {
+  position: relative;
+}
+a[data-tooltip]::before,
+a[data-tooltip]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
+}
+a[data-tooltip]::before {
+  /*
+   * using data-tooltip instead of title so we 
+   * don't have the real tooltip overlapping
+   */
+  content: attr(data-tooltip);
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 5px;
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+}
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+  display: block;
+}
+
+/** positioning **/
+
+/* top tooltip */
+a[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 40px;
+}
+a[data-tooltip][data-placement="top"]::after {
+  border-top-color: #000;
+  border-bottom: none;
+  bottom: 50px;
+  left: 20px;
+  margin-bottom: 4px;
+}
+
+
+
+table {
+
+    border-spacing: 10px ;
+    position: relative;
+    top: -120px;
+    
+    width: 75%;
+  }
+  
+  .cast_list{
+    font-size: 0.9em;
+    min-width: 400px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(0, 0, 0 , 0.15);
+  }
+
+
+
+  td {
+    padding: 1px 15px;
+
+  }
+
+  #titlecast h2{
+      margin-left: 50px;
+      
+  }
+
+  .even {
+     background-color:  #2722551e ;
+    -webkit-transition: all 1s linear;
+
+  } 
+  
+.cast_list tbody tr {
+  border-bottom: 1px solid #0e0e0e;
+}
+
+  table a {
+      text-decoration: none;
+      
+  }
+
+.bold{
+  position: relative;
+  font-size: large;
+  color: #000;
+  top: -1px;
+}
+.column2 a {
+  text-decoration: none;
+}
+
+  h2{
+    margin-top: 10px;
+    border: 10px ;
+    margin-left: 20px;
+
+}
+
+.castlist_label {
+    color: black;
+    font-size: large;
+}
+
+footer{
+    position: relative;
+    top: 500px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "open sans";
+    color: #fff;
+    padding-top: 60px;
+    
+}
+
+.footer-content{
+    position: relative;
+    top: -250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+
+}
+
+.socials li {
+    margin: 0 10 px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.socials li img{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+
+.socials a:hover img {
+    color: aqua;
+}
+
+.footer-bottom{
+    position: relative;
+    top: -250px;
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    left: -20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    
+}
+
+button {
+    position: relative;
+    top: -170px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+    padding: 10px 30px;
+    border-radius: 3px;
+    transition: 350ms;
+    cursor: pointer;
+}
+button:hover {
+    background: #e75480;
+}
+
