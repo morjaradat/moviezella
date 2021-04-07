@@ -129,7 +129,7 @@ function toWatchList(event){
   // console.log(event.path[3].id);
   // // console.log(Movies.allMovie[multiIndexOf(event.path[2].id)]);
   favorite.push(Movies.allMovie[multiIndexOf(event.path[3].id)]);
-  localStorage.setItem('watchList', JSON.stringify(favorite));
+  localStorage.setItem('watchlist', JSON.stringify(favorite));
 }
 
 // preview infos

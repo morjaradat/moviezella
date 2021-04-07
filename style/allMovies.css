@@ -363,8 +363,29 @@ footer a{
 .footer{
     display: flex;
     flex-direction: row;
-    padding: 20px 30px;
+    padding: 10px 15px;
+    overflow: hidden;
     justify-content: space-between;
+    height: 160px;
+}
+#logo{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: -39px;
+    top: -38px;
+}
+#logo img{
+    width: 195px;
+    position: relative;
+    top: 14px;
+    left: -2px;
+}
+.main-footer{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: -229px;
 }
 .main-footer .logo2{
     display: block;
@@ -373,6 +394,10 @@ footer a{
     margin-bottom: 25px;;
 }
 .main-footer ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    letter-spacing: 4px;
     font-size: 16pt;
 }
 .main-footer ul li{
@@ -382,8 +407,12 @@ footer a{
     color: #e75480;
 }
 .social-media{
+    height: fit-content;
+    width: fit-content;
     font-size: 16pt;
-    margin-top: 44px;
+    position: relative;
+    left: -130px;
+    top: 15px;
 }
 .social-media h5{
     display: block;
@@ -391,13 +420,24 @@ footer a{
     font-size: 1.5rem;
     margin-bottom: 25px;;
 }
+.social-media ul{
+    position: relative;
+    top: -19px;
+    left: 40px;
+}
 .social-media ul li{
-    margin: 14px 0;
+    margin: 7px 0;
+}
+.social-media ul li i{
+    font-size: 23pt;
 }
 .contact{
+    position: relative;
+    left: -15px;
+    top: 14px;
     font-size: 16pt;
-    margin-top: 44px;
-    width: 430px;
+    height: fit-content;
+    width: fit-content;
 }
 .contact h5{
     display: block;
@@ -412,7 +452,7 @@ footer a{
 #cope-rights{
     font-family: 'New Tegomin', serif;
     text-align: center;
-    height: 30px;
+    height: 20px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 #phone-num{
@@ -424,7 +464,4 @@ footer a{
 .fa{
     background-color: white;
     color: black;
-}
-.social-media ul li a{
-    width: 20px;
 }
