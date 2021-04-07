@@ -2,88 +2,90 @@
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-header{
-    position: fixed;
-    top: 10;
-    left: 0;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 2222;
-    background-color: #111;
+.bold{
+  position: relative;
+  left: -7px;
+  top: 2px;
+  font-size: larger;
+
 }
 
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  z-index: 2222;
+  height: 67px;
+  background-color: black;
+}
 header .logo2{
-    position: relative;
-    font-weight: 700;
-    top: 10px;
-    left: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6s;
+  position: relative;
+  font-weight: 700;
+  top: 10px;
+  left: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
 }
 header.sticky .logo2{
-    color: black;
-    top: 0;
-    left: 0;
+  color: black;
+  top: 0;
+  left: 9px;
+ 
 }
-
 header ul{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 80px;
-    top: 10px;
-
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 80px;
+  top: 10px;
 }
 header.sticky ul{
-
-    top: 0;
-
+  top: 0;
 }
-
 header ul li{
-    position: relative;
-    list-style: none;
+  position: relative;
+  list-style: none;
 }
-
 header ul li a{
-    position: relative;
-    margin:  0 15px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    font-weight: 500px;
-    transition: 0.5s;
+  
+  position: relative;
+  margin:  0 15px;
+  margin-bottom: 100px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.5s;
+  font-weight: 600;
 }
 header ul li a:hover{
-    color: #e75480;
+  color: #e75480;
 }
-
-
 header.sticky{
-    padding:  5px 10px;
-    background: #fff;
-    /* border-radius: 100% 0% 100% 0% / 0% 20% 50% 20% ;  */
-
+  background: #40373796;
+  box-shadow: 0px 6px 4px #2727273d;
 }
-
 header.sticky ul li a {
-     color: black;
+   color: black;
+   font-weight: 600;
 }
 header.sticky ul li a:hover {
-    color: #e75480;
+  color: #e75480;
 }
 
 
@@ -93,7 +95,7 @@ header.sticky ul li a:hover {
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0.199);
+    background-color: rgba(243, 242, 242, 0.705);
     width: 900px;
     width: 100%;
 
@@ -154,13 +156,13 @@ a:hover {
     position:absolute;
     overflow: hidden;
     top:0; left:0;
-    background:red;
+    /* background:red; */
     /* background: url("/img/movieprofile/jpbground.jpg"); */
     z-index:-1;
    
     /* transform: skewY(-1deg); */
     transform-origin:0 0;
-    //chrome antialias fix
+    /* //chrome antialias fix */
     /* -webkit-backface-visibility: hidden;  */
     
   }
@@ -221,7 +223,6 @@ a:hover {
     top: 2px;
     padding-right: 7px;
   }
-
 }
 
 .description {
@@ -245,7 +246,7 @@ a:hover {
 
 .tag {
     position: relative;
-    background: white;
+    background: #C4AF3D;
     border-radius: 10px;
     padding: 3px 8px;
     font-size: 14px;
@@ -257,7 +258,7 @@ a:hover {
   }
   
   .tag:hover {
-    background: #ddd;
+    background:#e75480;
   }
 
 
@@ -282,7 +283,7 @@ a:hover {
   }
 
   
-//star rating stuff via: https://codepen.io/jamesbarnett/pen/vlpkh/
+/* //star rating stuff via: https://codepen.io/jamesbarnett/pen/vlpkh/ */
 
 fieldset, label { margin: 0; padding: 0; }
 
@@ -325,7 +326,7 @@ fieldset, label { margin: 0; padding: 0; }
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 
-//tooltip stuff via: https://codepen.io/peiche/pen/JaftA
+/* //tooltip stuff via: https://codepen.io/peiche/pen/JaftA */
 
 a[data-tooltip] {
   position: relative;
@@ -381,165 +382,6 @@ a[data-tooltip][data-placement="top"]::after {
 
 
 
-table {
-
-    border-spacing: 10px ;
-    position: relative;
-    top: -50px;
-    left: -55px;
-    
-    width: 75%;
-  }
-  
-  .cast_list{
-    font-size: 0.9em;
-    min-width: 400px;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgb(0, 0, 0 , 0.15);
-    font-size: 18px;
-  }
-
-
-
-  td {
-    padding: 1px 15px;
-    text-align: center;
-
-  }
-
-  #titlecast h2{
-      margin-left: 50px;
-      
-  }
-
-  .even {
-     background-color:  #2722551e ;
-    -webkit-transition: all 1s linear;
-
-  } 
-
- .character{
-   padding: 10px;
-  
- }
-  
-.cast_list tbody tr {
-  border-bottom: 1px solid #0e0e0e;
-}
-
-  table a {
-      text-decoration: none;
-      
-  }
-
-.bold{
-  position: relative;
-  font-size: large;
-  color: #000;
-  top: -1px;
-}
-.column2 a {
-  text-decoration: none;
-}
-
-  h2{
-    margin-top: 10px;
-    border: 10px ;
-    margin-left: 20px;
-
-}
-
-.castlist_label {
-    color: black;
-    font-size: large;
-}
-
-footer{
-    position: relative;
-    top: 500px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #111;
-    height: auto;
-    width: 100vw;
-    font-family: "open sans";
-    color: #fff;
-    padding-top: 60px;
-    
-}
-
-.footer-content{
-    position: relative;
-    top: -250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-content h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-}
-
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-
-}
-
-.socials li {
-    margin: 0 10 px;
-}
-
-.socials a {
-    text-decoration: none;
-    color: #fff;
-
-}
-
-.socials li img{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-
-}
-
-.socials a:hover img {
-    color: aqua;
-}
-
-.footer-bottom{
-    position: relative;
-    top: -250px;
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-    left: -20px;
-}
-
-.footer-bottom p {
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-    
-}
 
 button {
     position: relative;
@@ -557,3 +399,215 @@ button:hover {
     background: #e75480;
 }
 
+
+/*	
+	Side Navigation Menu V2, RWD
+	===================
+	Author: https://github.com/pablorgarcia
+ */
+
+ /* @charset "UTF-8";
+*/
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+ .cast_list {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   line-height: 1.42em;
+   color:#A7A1AE;
+   background-color:#1F2739;
+ }
+ 
+ 
+ 
+table {
+
+  border-spacing: 10px ;
+  position: relative;
+  top: -100px;
+  left: -50px;
+  
+  width: 100%;
+}
+
+ 
+ .cast_list th h1 {
+
+     font-weight: bold;
+     font-size: 5em;
+   text-align: left;
+   color: #ffef0a;
+ }
+ 
+ .cast_list td {
+     font-weight: normal;
+     font-size: 1em;
+   -webkit-box-shadow: 0 2px 2px -2px #eed70b;
+      -moz-box-shadow: 0 2px 2px -2px #0E1119;
+           box-shadow: 0 2px 2px -2px #0E1119;
+ }
+ 
+ .cast_list {
+     text-align: left;
+     overflow: hidden;
+     width: 100%;
+     margin: 0 auto;
+   display: table;
+   padding: 0 0 8em 0;
+ }
+ 
+ .cast_list td, .container th {
+     padding-bottom: 2%;
+     padding-top: 2%;
+   padding-left:2%;  
+ }
+ 
+ /* Background-color of the odd rows */
+ .cast_list tr:nth-child(odd) {
+     background-color: #323C50;
+ }
+ 
+ /* Background-color of the even rows */
+ .cast_list tr:nth-child(even) {
+     background-color: #2C3446;
+ }
+ 
+ .cast_list th {
+     background-color: #1F2739;
+ }
+ 
+ .cast_list td:first-child { color: #FB667A; }
+ 
+ .cast_list tr:hover {
+    background-color: #464A52;
+ -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+      -moz-box-shadow: 0 6px 6px -6px #0E1119;
+           box-shadow: 0 6px 6px -6px #0E1119;
+ }
+ 
+ .cast_list td:hover {
+   background-color: #FFF842;
+   color: #403E10;
+   font-weight: bold;
+   
+   box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+   transform: translate3d(6px, -6px, 0);
+   
+   transition-delay: 0s;
+     transition-duration: 0.4s;
+     transition-property: all;
+   transition-timing-function: line;
+ }
+ 
+ @media (max-width: 800px) {
+ .container td:nth-child(4),
+ .container th:nth-child(4) { display: none; }
+ }
+
+ footer{
+  background-color: black;
+  color: rgb(214, 25, 25);
+  width: 100%;  
+  /* justify-content: center; */
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.log00{
+  width: 15%;
+  margin-bottom: 30px;
+  /* margin-top: 10%; */
+
+}
+
+footer h1{
+  color: #e75480 ;
+}
+
+.copy{
+  position: absolute;
+  left: 1050px;
+  top:  1150px;
+}
+
+.footerMain{
+  position: absolute;
+  left: -260px;
+  top:  1080px;
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.footerMain h5 a{
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: rgb(255, 255, 255);
+
+}
+
+
+.footerMainh1{
+  position: absolute;
+  left: 345px;
+  top:  1040px;
+  font-size: 20px;
+}
+
+.footerFollowh5{
+  position: absolute;
+  left: 50px;
+  top:  1080px;
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* text-decoration: none; */
+  /* text-transform: uppercase; */
+}
+
+.footerFollowh5 h5 a{
+  text-decoration: none;
+  color: white;
+  /* text-transform: uppercase; */
+
+}
+
+.footerFollowh1{
+  position: absolute;
+  left: 680px;
+  top:  1040px;
+  font-size: 20px;
+}
+
+.footerContacth5{
+  position: absolute;
+  left: 500px;
+  top:  1080px;
+  color: #fff;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.footerContacth1{
+  position: absolute;
+  left: 1120px;
+  top:  1040px;
+  font-size: 20px;
+}
