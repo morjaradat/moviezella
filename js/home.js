@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
     
 
   setInterval(() => {
-    index += 1;
+    index++;
     if (index < 3) {
       
       image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
@@ -67,14 +67,13 @@ let trailerBox = document.querySelector('.trailer');
 function openTrailer(e){
   let id = parseInt(e.target.id) ;
 
-
-  console.log(typeof id)
+  console.log(Movies.allMovie[0].id)
 
   let html = `
   <iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[id].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
 for(let i = 0 ; i < 3 ; i++){
-  if(id == Movies.allMovie[i].id){
+  if(id === Movies.allMovie[i].id){
     trailerBox.innerHTML += html;
     break;
   }
@@ -86,7 +85,6 @@ for(let i = 0 ; i < 3 ; i++){
 function removeEvent(){
   watchtraler.removeEventListener('click',openTrailer);
 
-  // console.log('removed')
 }
 
 
@@ -95,6 +93,12 @@ function removeEvent(){
 
 let trendBtn = document.getElementById('trend');
 let rate = document.getElementById('rate');
+
+
+window.addEventListener('load', () => {
+  trendBtn.style.color = '#e75480'
+})
+
 
 rate.addEventListener('click',()=>{
   rate.style.color = '#e75480'
@@ -135,13 +139,18 @@ function compare(a, b) {
 
 trinding.sort(compare);
 
+let newarrayTrend;
 
 for (let i = 0; i < 4; i++) {
+
+  newarrayTrend = trinding[i].profileImage.split('/')
+
+  newarrayTrend.shift()
 
 
   let html = `
                     <div class="card movie_card">
-                        <img src="${trinding[i].profileImage}" class="card-img-top" alt="...">
+                        <img src="${newarrayTrend.join('/')}" class="card-img-top" alt="...">
                         <div class="card-body">
                         <i class="fas fa-play play_button" id="${trinding[i].id}" data-toggle="tooltip" data-placement="bottom" title="profile">
                         </i>
@@ -172,16 +181,18 @@ function comparerate(a, b) {
 }
 
 rating.sort(comparerate)
+
+let newarrayRating;
 for (let i = 0; i < 4; i++) {
 
-  
-
-console.log(rating[i].profileImage.split('/'))
 
 
+  newarrayRating = rating[i].profileImage.split('/');
+
+  newarrayRating.shift();
 
   let html = `<div class="card movie_card">
-                    <img src="${rating[i].profileImage}" class="card-img-top" alt="...">
+                    <img src="${newarrayRating.join('/')}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <i class="fas fa-play play_button" id="${rating[i].id}" data-toggle="tooltip" data-placement="bottom" title="profile"></i>
                     <h5 class="card-title">${rating[i].name}</h5>
