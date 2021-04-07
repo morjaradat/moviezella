@@ -1,8 +1,13 @@
 'use strict';
 
 let movieslist = JSON.parse(localStorage.getItem('watchlist'));
+if(movieslist){
+  movieslist = JSON.parse(localStorage.getItem('watchlist'))
+}else{
+  movieslist=[];
+}
+// console.log(movieslist)
 
-console.log(movieslist)
 // scroll styles for navigation bar
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
@@ -123,8 +128,8 @@ displayMovie();
 // console.log(Movies.allMovie);
 
 // add to watch list !!
-let addToWatchList = document.getElementsByClassName('watchlist');
-
+let addToWatchList = document.querySelectorAll('.watchlist');
+// console.log(addToWatchList);
 for(let i = 0; i<addToWatchList.length; i++){
   addToWatchList[i].addEventListener('click', toWatchList);
 }
@@ -141,10 +146,10 @@ function toWatchList(event){
 let previewMovie = document.getElementsByClassName('view-profile');
 
 for(let i = 0; i<previewMovie.length; i++){
-  previewMovie[i].addEventListener('click', viewMovieinfo);
+  previewMovie[i].addEventListener('click', viewMovIeinfo);
 }
 
-function viewMovieinfo(event){
+function viewMovIeinfo(event){
   // console.log(event.path[3].id);
   let preview = Movies.allMovie[multiIndexOf(event.path[3].id)].id;
   localStorage.setItem('profileId', preview);
