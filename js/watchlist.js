@@ -6,7 +6,7 @@
 
 let movieslist = JSON.parse(localStorage.getItem('watchlist'));
 
-// console.log(movieslist)
+console.log(movieslist)
 // need  call the constructor bilud in the the all movie page  by add to list buttom by push the information in new array to see it here
 
 //image,description,URLz
@@ -111,29 +111,30 @@ for(let i = 0 ; i < removeBtn.length ; i++){
 }
 
 
-// function removeLI(e){
+function removeLI(e){
 
-//   let id = e.target.id
-
-
-//   for(let i = 0 ; i<movieslist.length ; i++){
-
-//     if(movieslist[i].id==id){
-
-//       // movieslist.splice(i, 1);
+  let id = e.target.id
 
 
-//       // localStorage.setItem('watchlist',movieslist)
+
+  for(let i = 0 ; i<movieslist.length ; i++){
+
+    if(movieslist[i].id==id){
+
+      movieslist.splice(i, 1);
+
+
+      localStorage.setItem('watchlist',JSON.stringify(movieslist))
 
       
-//     }
-//   }
+    }
+  }
 
 
-//   // console.log(id)
+  // console.log(id)
 
-//   // localStorage.removeItem('image');
-// }
+  // localStorage.removeItem('image');
+}
 
 
 

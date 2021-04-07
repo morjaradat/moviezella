@@ -290,7 +290,7 @@ header.sticky ul li a:hover {
 
 .moviesList{
     width: 80%;
-    height: 100vh;
+    height: 65vh;
     margin-left: 10%;
 }
 
@@ -323,6 +323,38 @@ header.sticky ul li a:hover {
 .nav2 ul li a:hover{
     color: #e75480;
     cursor: pointer;
+}
+
+
+.trailer{
+    width: 100%;
+    display: none;
+    height: 100vh;
+    z-index: 555555;
+    background-color: #000000c9;
+}
+
+.trailer iframe {
+    width: 60%;
+    height: 80%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.trailer #closeBtn{
+
+    position: relative;
+    /* z-index: 51156; */
+    top: -480px;
+    transition: 0.5s;
+    right: -85%;
+    transform: scale(2);
+}
+
+.trailer #closeBtn:hover{
+
+    transform: scale(1.3);
+    
 }
 
 
@@ -450,4 +482,125 @@ header.sticky ul li a:hover {
 }  
 
 
-/* card css */
+/* footer */
+
+
+footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 15rem;
+    left: 0;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    overflow: hidden;
+    justify-content: space-between;
+    height: 160px;
+}
+#logo{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: -39px;
+    top: -38px;
+}
+#logo img{
+    width: 195px;
+    position: relative;
+    top: 14px;
+    left: -2px;
+}
+.main-footer{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: -229px;
+}
+.main-footer .logo2{
+    display: block;
+    color: #e75480;
+    font-size: 2rem;
+    margin-bottom: 25px;;
+}
+.main-footer ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    letter-spacing: 4px;
+    font-size: 16pt;
+}
+.main-footer ul li{
+    margin: 14px 0;
+}
+.main-footer ul li a:hover{
+    color: #e75480;
+}
+.social-media{
+    height: fit-content;
+    width: fit-content;
+    font-size: 16pt;
+    position: relative;
+    left: -130px;
+    top: 15px;
+}
+.social-media h5{
+    display: block;
+    color: #e75480;
+    font-size: 1.5rem;
+    margin-bottom: 25px;;
+}
+.social-media ul{
+    position: relative;
+    top: -19px;
+    left: 40px;
+}
+.social-media ul li{
+    margin: 7px 0;
+}
+.social-media ul li i{
+    font-size: 23pt;
+}
+.contact{
+    position: relative;
+    left: -15px;
+    top: 14px;
+    font-size: 16pt;
+    height: fit-content;
+    width: fit-content;
+}
+.contact h5{
+    display: block;
+    color: #e75480;
+    font-size: 1.5rem;
+    margin-bottom: 25px;;
+}
+.contact ul li{
+    margin: 14px 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+#cope-rights{
+    font-family: 'New Tegomin', serif;
+    text-align: center;
+    height: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+#phone-num{
+    font-family: 'Roboto Slab', serif;
+}
+#email{
+    font-family: 'Roboto Slab', serif;
+}
+.fa{
+    background-color: white;
+    color: black;
+}
