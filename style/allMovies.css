@@ -356,6 +356,9 @@ footer{
     font-family: 'Oswald', sans-serif;
     background-color: black;
 }
+footer span{
+    background-color: black;
+}
 footer a{
     text-decoration: none;
     color: white;
@@ -461,7 +464,7 @@ footer a{
 #email{
     font-family: 'Roboto Slab', serif;
 }
-.fa{
+/* .fa{
     background-color: white;
     color: black;
-}
+} */
