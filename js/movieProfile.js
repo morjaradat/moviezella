@@ -81,11 +81,11 @@ let html = `<div class="container">
             <table class="cast_list">
                 <tbody>
                     <tr>
-                        <td colspan="4" class="castlist_label">Cast overview, first billed only:</td>
+                        <td colspan="4" class="castlist_label">Cast overview, first billed only</td>
                     </tr>
                     <tr class="odd">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
-                                    src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+                                    src="/img/movieprofile/harfy.jpg" class="loadlate"></a> </td>
 
                         <td>${profile[0].actors[0]} </td>
 
@@ -96,7 +96,7 @@ let html = `<div class="container">
 
                     <tr class="even">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
-                                    src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+                                    src="/img/movieprofile/page.jpg" class="loadlate"></a> </td>
 
                         <td>${profile[0].actors[1]} </td>
 
@@ -107,7 +107,7 @@ let html = `<div class="container">
 
                     <tr class="odd">
                         <td class="primary_photo"><a href="#"><img height="44" width="32"
-                                    src="/img/movieprofile/msc.jpg" class="loadlate"></a> </td>
+                                    src="/img/movieprofile/murphy.jpg" class="loadlate"></a> </td>
 
                         <td>${profile[0].actors[2]}</td>
 
