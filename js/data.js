@@ -49,7 +49,7 @@ let allMovies = [
     pathIds:'_2aWqecTTuE',
     coverImg : 'Dracula.jpg',
     actors : ['Luke Evans','Sarah Gadon','Dominic Cooper'],
-    caractors : ['Vald','Mirena','Mehmed'],
+    caractors : ['Vlad','Mirena','Mehmed'],
     intro: 'As his kingdom is being threatened by the Turks, young prince Vlad Tepes must become a monster feared by his own people in order to obtain the power needed to protect his own family, and the families of his kingdom',
     views:1000,
     rate : 2,
