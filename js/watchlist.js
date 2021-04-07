@@ -14,6 +14,11 @@ window.addEventListener('scroll',()=>{
   let header = document.querySelector('header');
   header.classList.toggle('sticky',window.scrollY > 0);
 });
+window.addEventListener('scroll', () => {
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky2', window.scrollY > 485);
+});
+
 
 for (let i = 0; i < movieslist.length; i++) {
 
