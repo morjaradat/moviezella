@@ -142,10 +142,10 @@ let allMovies = [
   {
     id:9,
     name : 'The Green Mile',
-    categories :'Crime Drama Fantasy  ',
+    categories :'Crime Drama Fantasy',
     Duration: '3h9m',
     pathIds: 'Ki4haFrqSrw',
-    coverImg : 'The-Green-Mile.jpg',
+    coverImg : 'the-green-mile.jpg',
     actors : ['Tom Hanks','David Morse','Michael Clarke Duncan'],
     caractors:['Paul Edgecomb','Brutus Howell','John Coffey'],
     intro:'The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.',
