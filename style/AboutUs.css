@@ -369,6 +369,7 @@ header.sticky ul li a:hover {
   color: #e75480;
 }
 
+
 #parallax{
     width: 30px;
 }
@@ -439,14 +440,14 @@ header.sticky ul li a:hover {
     color: #e75480;
     font-weight: bold;
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 7%;
 }
 
 #categories{
     color: rgb(255, 255, 255);
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 7%;
 
     margin-right: 25%;
@@ -555,7 +556,7 @@ header.sticky ul li a:hover {
 
 .licard{
 text-transform: uppercase;
-font-size: 3.5rem;
+font-size: 3rem;
 letter-spacing: 3px;
 margin-right: .3px;
 margin-bottom: 5rem;
@@ -617,7 +618,7 @@ position: relative;
 }
 
 .teamName{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #333;
     margin: .8rem 0;
 }
@@ -630,13 +631,13 @@ position: relative;
 }
 
 .me{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 1.5rem ;
     font-style: italic;
     text-align: center;
     color: #333;
 
-    height: 4rem;
+    height: 3rem;
     
 }
 
@@ -697,7 +698,7 @@ position: relative;
     }
     .cards{
         margin: 2rem;
-        width: 100%;
+        width: 70%;
         
     }
 }
@@ -720,43 +721,72 @@ position: relative;
     flex-wrap: wrap;
     /* justify-content: space-between; */
 
-    margin-left: 130px;
+    margin-left: 60px;
     margin-top: 70px;
 }
 
-
-
- /* footer footer footer footerfooter footerfooterfooterfooterfooterfooterfooterfooter */
-
-
-footer{
-    background-color: black;
-    color: white;
-    width: 100%;  
-    /* justify-content: center; */
-    bottom: 0;
-    width: 100%;
+/* .mainUl {
     display: flex;
+    flex-flow: row wrap;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+ */
+
+ footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 15rem;
+    left: 0;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    overflow: hidden;
     justify-content: space-between;
-    align-items: center;
-
+    height: 160px;
 }
-
-.log00{
-    width: 15%;
-    margin-bottom: 30px;
-
+#logo{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: -39px;
+    top: -38px;
 }
-
-footer h1{
-    color: #e75480 ;
+#logo img{
+    width: 195px;
+    position: relative;
+    top: 14px;
+    left: -2px;
 }
-
-.copy{
-    position: absolute;
-    left: 1190px;
-    top:  2550px;
+.main-footer{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: -229px;
 }
+.main-footer .logo2{
+    display: block;
+    color: #e75480;
+    font-size: 2rem;
+    margin-bottom: 25px;;
+}
+.main-footer ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    letter-spacing: 4px;
+    font-size: 16pt;
+
 
 .footerMain{
     position: absolute;
@@ -779,65 +809,72 @@ footer h1{
     position: absolute;
     
 }
-
-
-.footerMainh1{
-    position: absolute;
-    left: 345px;
-    top:  2425px;
-    font-size: 20px;
+  
+.main-footer ul li{
+    margin: 14px 0;
+}
+.main-footer ul li a:hover{
+    color: #e75480;
+}
+.social-media{
+    height: fit-content;
+    width: fit-content;
+    font-size: 16pt;
+    position: relative;
+    left: -130px;
+    top: 15px;
+}
+.social-media h5{
+    display: block;
+    color: #e75480;
+    font-size: 1.5rem;
+    margin-bottom: 25px;;
+}
+.social-media ul{
+    position: relative;
+    top: -19px;
+    left: 40px;
+}
+.social-media ul li{
+    margin: 7px 0;
+}
+.social-media ul li i{
+    font-size: 23pt;
+}
+.contact{
+    position: relative;
+    left: -15px;
+    top: 14px;
+    font-size: 16pt;
+    height: fit-content;
+    width: fit-content;
+}
+.contact h5{
+    display: block;
+    color: #e75480;
+    font-size: 1.5rem;
+    margin-bottom: 25px;;
+}
+.contact ul li{
+    margin: 14px 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+#cope-rights{
+    font-family: 'New Tegomin', serif;
+    text-align: center;
+    height: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+#phone-num{
+    font-family: 'Roboto Slab', serif;
+}
+#email{
+    font-family: 'Roboto Slab', serif;
+}
+footer .fa{
+    background-color: white;
+    color: black;
 }
 
-.footerFollowh5{
-    position: absolute;
-    left: 770px;
-    top:  2480px;
-
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    /* text-decoration: none; */
-    /* text-transform: uppercase; */
-}
-
-.footerFollowh5 h5 a{
-    text-decoration: none;
-    color: white;
-    /* text-transform: uppercase; */
-
-}
-
-.footerFollowh1{
-    position: absolute;
-    left: 760px;
-    top:  2425px;
-    font-size: 20px;
-}
-
-.footerContacth5{
-    position: absolute;
-    left: 1180px;
-    top:  2480px;
-
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-.footerContacth1{
-    position: absolute;
-    left: 1250px;
-    top:  2425px;
-    font-size: 20px;
-}
-
- /* footer footer footer footerfooter footerfooterfooterfooterfooterfooterfooterfooter */
 
 
