@@ -17,6 +17,11 @@ let image = document.getElementById('cover');
 let movieName = document.getElementById('movieName')
 let categories = document.getElementById('categories')
 
+let watchtraler = document.querySelector('.btn1');
+let veiwInfo = document.querySelector('.btn2');
+
+
+
 
 
 
@@ -27,8 +32,11 @@ window.addEventListener('load', () => {
   setInterval(() => {
     index += 1;
     if (index < 3) {
+      
       image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
-      image.setAttribute('class', `fade-in`)
+      watchtraler.setAttribute('id', `${Movies.allMovie[index].id}`);
+      watchtraler.addEventListener('click',openTrailer)
+      veiwInfo.setAttribute('id',`${Movies.allMovie[index].id}`)
       movieName.textContent = Movies.allMovie[index].name;
       categories.textContent = `${Movies.allMovie[index].category} | Duration: ${Movies.allMovie[index].duration}`;
     } else {
@@ -36,25 +44,72 @@ window.addEventListener('load', () => {
       image.setAttribute('src', `img/covers/WrathOfTheTitans.jpg`)
       movieName.textContent = 'Wrath OF THE TITANS';
       categories.textContent = 'Fantasy Family Drama | Duration: 1h50m ';
+      watchtraler.id = '16'
+      veiwInfo.id = '16'
+      watchtraler.addEventListener('click',openTrailer)
     }
+
+
+    
   }, 5000);
 
+
+  
 });
+
+setInterval(() => {
+  removeEvent()
+  console.log('removed')
+}, 20000);
+
+let trailerBox = document.querySelector('.trailer');
+
+function openTrailer(e){
+  let id = parseInt(e.target.id) ;
+
+
+  console.log(typeof id)
+
+  let html = `
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[id].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+for(let i = 0 ; i < 3 ; i++){
+  if(id == Movies.allMovie[i].id){
+    trailerBox.innerHTML += html;
+    break;
+  }
+}
+  trailerBox.style.display = 'block'
+
+}
+
+function removeEvent(){
+  watchtraler.removeEventListener('click',openTrailer);
+
+  // console.log('removed')
+}
+
+
+
 
 
 let trendBtn = document.getElementById('trend');
 let rate = document.getElementById('rate');
 
 rate.addEventListener('click',()=>{
+  rate.style.color = '#e75480'
+  trendBtn.style.color = 'black'
   document.getElementById("trendcardsContainer").style.display = "none";
   document.getElementById("ratingcardsContainer").style.display = "flex";
 })
 
 trendBtn.addEventListener('click',()=>{
+  trendBtn.style.color = '#e75480'
+  rate.style.color = 'black'
+
   document.getElementById("trendcardsContainer").style.display = "flex";
   document.getElementById("ratingcardsContainer").style.display = "none";
 })
-
 
 
 
@@ -83,7 +138,6 @@ trinding.sort(compare);
 
 for (let i = 0; i < 4; i++) {
 
-  // 
 
   let html = `
                     <div class="card movie_card">
@@ -119,6 +173,10 @@ function comparerate(a, b) {
 
 rating.sort(comparerate)
 for (let i = 0; i < 4; i++) {
+
+  
+
+console.log(rating[i].profileImage.split('/'))
 
 
 
@@ -183,7 +241,7 @@ function storege(e){
     
     localStorage.setItem('profileId',id);
 
-    window.location = '../pages/movieProfile.html'
+    window.location = '/pages/movieProfile.html'
 }
 
 // passing the movie profile Id 

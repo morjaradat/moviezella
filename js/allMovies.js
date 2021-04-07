@@ -1,4 +1,8 @@
 'use strict';
+
+let movieslist = JSON.parse(localStorage.getItem('watchlist'));
+
+console.log(movieslist)
 // scroll styles for navigation bar
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
@@ -85,6 +89,7 @@ function displayMovie(){
 // displaying thr trailer when clicked on video image
 playerListener.addEventListener('click', (event)=> {
   // console.log(event.target.id);
+  // console.log(Movies.allMovie[multiIndexOf(event.target.id)].mainImage)
   // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
   if(event.target.id !== 'allMovies-Container'){
     const moviePlayerContainer = document.getElementById('trailer');
@@ -124,12 +129,12 @@ for(let i = 0; i<addToWatchList.length; i++){
   addToWatchList[i].addEventListener('click', toWatchList);
 }
 
-let favorite = [];
+// let favorite = [];
 function toWatchList(event){
   // console.log(event.path[3].id);
   // // console.log(Movies.allMovie[multiIndexOf(event.path[2].id)]);
-  favorite.push(Movies.allMovie[multiIndexOf(event.path[3].id)]);
-  localStorage.setItem('watchlist', JSON.stringify(favorite));
+  movieslist.push(Movies.allMovie[multiIndexOf(event.path[3].id)]);
+  localStorage.setItem('watchlist', JSON.stringify(movieslist));
 }
 
 // preview infos

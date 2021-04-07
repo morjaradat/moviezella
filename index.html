@@ -36,9 +36,13 @@
         <div class="title">
             <h3 id="movieName">Wrath OF THE TITANS</h3>
             <p id="categories" >Fantasy Family Drama | Duration: 1h50m </p>
-            <button class="btn1" >WATCH TRAILER</button>
-            <button class="btn2" >VIEW INFO</button>
+            <button class="btn1" id="16" >WATCH TRAILER</button>
+            <button class="btn2" id="16" >VIEW INFO</button>
             <a href="#"><i>+ Add to Watchlist</i></a>
+        </div>
+
+        <div class="trailer"  >
+            <button id="closeBtn" onclick="closeTrailer()" class="fas fa-window-close"></button>
         </div>
 
 
@@ -61,7 +65,7 @@
         <div class="nav2">
             <ul>
                 <li> <a id="trend" >Trending</a> </li>
-                <li> <a id="rate" >rating</a> </li>
+                <li> <a id="rate" >Rating</a> </li>
             </ul>
         </div>
 
@@ -77,6 +81,52 @@
         </div>
 
     </section>
+    <footer>
+        <div class="footer">
+            
+            <div id="logo"><img class="log00" src="../img/ameenImg/loveellove.png" alt=""></div>
+
+            <div class="main-footer">
+            <ul>
+                <li> <a href="../index.html">Home</a> </li>
+                <li id="myPage"> <a href="#">All Movies</a> </li>
+                <li> <a href="../pages/watchList.html">Watch List</a> </li>
+                <li> <a href="../pages/aboutUs.html">About Us</a> </li>
+            </ul>
+            </div>
+
+            <div class="social-media">
+                <span><h5>Follow Us</h5></span>
+                <ul>
+                    <li><i class="fab fa-facebook"></i></a></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul> 
+            </div>
+            
+            <div class="contact">
+                <span><h5>Contact Us</h5></span>
+                <ul>
+                    <li>Phone Number: <span id="phone-num">006-5552-666</span> </li>
+                    <li>Email: <span id="email">movieszellasucks@movies.com</span> </li>
+                </ul>
+            </div>
+        </div>
+        <div id="cope-rights">
+            &copy; 2021 designed by MOVIESZELLA
+    </div>
+    </footer>
+
+    <script>
+
+        let trailerBox = document.querySelector('.trailer');
+
+
+        function closeTrailer(){
+        trailerBox.style.display = 'none'
+        console.log(5)
+        }
+    </script>
     <script src="js/data.js"></script>
     <script type="module"  src="js/home.js"></script>
 </body>
