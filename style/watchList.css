@@ -184,8 +184,11 @@ div#watchlist h1{
     font-size: 55px;
 }
 #myPage a{
-    color: #e75480;
+    color: white;
     font-size: 20px;
+}
+#myPage a:hover{
+  color: #e7658c;
 }
 
 *{
@@ -451,110 +454,128 @@ button.moreInfo:hover{
 /* footer ///////////////////////// */
 
 footer{
-  background-color: black;
-  color: rgb(214, 25, 25);
-  width: 100%;  
-  /* justify-content: center; */
-  bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  height: 100%;
+  position: relative;
+  top: 15rem;
+  left: 0;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
 }
-
-.log00{
-  width: 15%;
-  margin-bottom: 30px;
-  /* margin-top: 10%; */
-
-}
-
-footer h1{
-  color: #e75480 ;
-}
-
-.copy{
-  position: absolute;
-  left: 1060px;
-  top:  2150px;
-}
-
-.footerMain{
-  position: absolute;
-  left: 300px;
-  top:  2075px;
-  
-
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
-.footerMain h5 a{
-  text-decoration: none;
-  /* text-transform: uppercase; */
-  color: rgb(255, 255, 255);
-
-}
-
-
-.footerMainh1{
-  position: absolute;
-  left: 275px;
-  top:  2040px;
-  font-size: 20px;
-}
-
-.footerFollowh5{
-  position: absolute;
-  left: 700px;
-  top:  2085px;
-
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-  /* text-transform: uppercase; */
-}
-
-.footerFollowh5 h5 a{
+footer a{
   text-decoration: none;
   color: white;
-  /* text-transform: uppercase; */
-
 }
-
-.footerFollowh1{
-  position: absolute;
-  left: 690px;
-  top:  2040px;
-  font-size: 20px;
+.footer{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+  overflow: hidden;
+  justify-content: space-between;
+  height: 160px;
+  background-color: black;
 }
-
-.footerContacth5{
-  position: absolute;
-  left: 1050px;
-  top:  2080px;
-  color: #fff;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-  text-transform: uppercase;
+#logo{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  left: -39px;
+  top: -38px;
 }
-
-
-.footerContacth1{
-  position: absolute;
-  left: 1130px;
-  top:  2040px;
-  font-size: 20px;
+#logo img{
+  width: 195px;
+  position: relative;
+  top: 14px;
+  left: -2px;
+}
+.main-footer{
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  left: -229px;
+}
+.main-footer .logo2{
+  display: block;
+  color: #e75480;
+  font-size: 2rem;
+  margin-bottom: 25px;;
+}
+.main-footer ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  letter-spacing: 4px;
+  font-size: 16pt;
+  
+}
+.main-footer ul li{
+  margin: 14px 0;
+  color: white;
+}
+.main-footer ul li a:hover{
+  color: #e75480;
+}
+.social-media{
+  height: fit-content;
+  width: fit-content;
+  font-size: 16pt;
+  position: relative;
+  left: -130px;
+  top: 15px;
+}
+.social-media h5{
+  display: block;
+  color: #e75480;
+  font-size: 1.5rem;
+  margin-bottom: 25px;;
+}
+.social-media ul{
+  position: relative;
+  top: -19px;
+  left: 40px;
+}
+.social-media ul li{
+  margin: 7px 0;
+  color: white;
+}
+.social-media ul li i{
+  font-size: 23pt;
+}
+.contact{
+  position: relative;
+  left: -15px;
+  top: 14px;
+  font-size: 16pt;
+  height: fit-content;
+  width: fit-content;
+}
+.contact h5{
+  display: block;
+  color: #e75480;
+  font-size: 1.5rem;
+  margin-bottom: 25px;;
+}
+.contact ul li{
+  margin: 14px 0;
+  color: white
+}
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+#cope-rights{
+  font-family: 'New Tegomin', serif;
+  text-align: center;
+  height: 20px;
+  background-color: black;
+  color: white;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+#phone-num{
+  font-family: 'Roboto Slab', serif;
+}
+#email{
+  font-family: 'Roboto Slab', serif;
+}
+.fa{
+  background-color: white;
+  color: black;
 }
