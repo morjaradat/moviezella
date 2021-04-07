@@ -73,8 +73,8 @@ header{
     align-items: center;
     transition: 0.6s;
     z-index: 2222;
-    height: 52px;
-    background-color: black;
+    height: 58px;
+    /* background-color: black; */
 }
 header .logo2{
     position: relative;
@@ -91,7 +91,7 @@ header .logo2{
     transition: 0.6s;
 }
 header.sticky .logo2{
-    color: white;
+    color: rgb(0, 0, 0);
     top: 0;
     left: 9px;
    
@@ -127,15 +127,32 @@ header ul li a:hover{
     color: #e75480;
 }
 header.sticky{
-    background: black;
+    background: rgb(255, 255, 255);
     box-shadow: 0px 6px 4px #2727273d;
 }
 header.sticky ul li a {
-     color: white;
+     color: rgb(0, 0, 0);
      font-weight: 600;
 }
 header.sticky ul li a:hover {
     color: #e75480;
+}
+header.sticky .logo2{
+  color: black;
+  top: 0;
+  left: 0;
+}
+header.sticky2 .logo2{
+  color: whitesmoke;
+  top: 0;
+  left: 0;
+}
+header.sticky2{
+  padding:  5px 10px;
+  background: #000;
+}
+header.sticky2 ul li a {
+  color: #fff;
 }
 .containar div{
     width: 50%;
@@ -184,8 +201,8 @@ div#watchlist h1{
     font-size: 55px;
 }
 #myPage a{
-    color: white;
-    font-size: 20px;
+    color: #e7658c;
+    font-size: 22px;
 }
 #myPage a:hover{
   color: #e7658c;
@@ -389,7 +406,7 @@ button.moreInfo:hover{
   margin-top: 1rem;
   width: 100%;
   position: relative;
-  top: -14px;
+  top: -67px;
 }
 .hero .heroImgBox {
   grid-area: 1/1/2/2;
@@ -433,10 +450,7 @@ button.moreInfo:hover{
 }
 .media a{
 
-    color: black;}
-
-   
-
+    /* color: black; */
     color: rgb(255, 255, 255);
     font-size: 35px;
     padding: 7px;
@@ -451,7 +465,7 @@ button.moreInfo:hover{
 }
 
 
-}
+
 
 /* footer ///////////////////////// */
 

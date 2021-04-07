@@ -16,12 +16,15 @@ window.addEventListener('scroll',()=>{
 });
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
-  header.classList.toggle('sticky2', window.scrollY > 485);
+  header.classList.toggle('sticky2', window.scrollY > 395);
 });
-
+// console.log(movieslist[3])
 
 for (let i = 0; i < movieslist.length; i++) {
 
+if (movieslist[i]!==null){
+
+  
   let container = document.getElementById('watch-list');
   let liEle =document.createElement('li');
   container.appendChild(liEle);
@@ -98,6 +101,7 @@ for (let i = 0; i < movieslist.length; i++) {
   document.getElementsByClassName('blur_back bright_back');
   divEle6.style.background=`url(${movieslist[i].mainImage})`;
   
+}
 }
 
 
