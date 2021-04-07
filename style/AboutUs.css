@@ -786,7 +786,30 @@ footer a{
     left: 0;
     letter-spacing: 4px;
     font-size: 16pt;
+
+
+.footerMain{
+    position: absolute;
+    left: 370px;
+    top:  1000px;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
 }
+
+.footerMain h5 a{
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: rgb(217, 255, 0);
+
+    position: absolute;
+    
+}
+  
 .main-footer ul li{
     margin: 14px 0;
 }

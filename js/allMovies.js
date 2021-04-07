@@ -37,7 +37,7 @@ function displayMovie(){
 
     const elDetails = document.createElement('div');
     elDetails.setAttribute('class', 'details');
-    elDetails.innerHTML = `<i id = "${Movies.allMovie[i].name}" class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="profile">
+    elDetails.innerHTML = `<i id = "${Movies.allMovie[i].name}" class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="display">
     </i>`;
     elMovie.appendChild(elDetails);
 
@@ -56,7 +56,7 @@ function displayMovie(){
     elDetails.appendChild(elRandoms);
     const elView = document.createElement('span');
     elView.setAttribute('class','view');
-    elView.textContent = `views : ${Movies.allMovie[i].views}`;
+    elView.textContent = `views:${Movies.allMovie[i].views}`;
     elRandoms.appendChild(elView);
     const elRate = document.createElement('span');
     elRate.setAttribute('class','rate');
@@ -74,12 +74,17 @@ function displayMovie(){
     elDuration.setAttribute('class', 'duration');
     elDuration.textContent = `${Movies.allMovie[i].duration}`;
     elTime.appendChild(elDuration);
+
+    const elBtn = document.createElement('div');
+    elBtn.setAttribute('class','btn');
+    elBtn.innerHTML = '<button class="watchlist"><i class="fas fa-file-medical"></i></button><button class="view-profile"><i class="fas fa-book-open"></i></button>';
+    elMovie.appendChild(elBtn);
   }
 }
 
 // displaying thr trailer when clicked on video image
 playerListener.addEventListener('click', (event)=> {
-  console.log(event.target.id);
+  // console.log(event.target.id);
   // console.log(Movies.allMovies[moviesNames.indexOf(event.target.alt)]);
   if(event.target.id !== 'allMovies-Container'){
     const moviePlayerContainer = document.getElementById('trailer');
@@ -104,7 +109,39 @@ function multiIndexOf(index){
   }
 }
 
+
+
+
 // calling out functions
 moviePlayer();
 displayMovie();
 // console.log(Movies.allMovie);
+
+// add to watch list !!
+let addToWatchList = document.getElementsByClassName('watchlist');
+
+for(let i = 0; i<addToWatchList.length; i++){
+  addToWatchList[i].addEventListener('click', toWatchList);
+}
+
+let favorite = [];
+function toWatchList(event){
+  // console.log(event.path[3].id);
+  // // console.log(Movies.allMovie[multiIndexOf(event.path[2].id)]);
+  favorite.push(Movies.allMovie[multiIndexOf(event.path[3].id)]);
+  localStorage.setItem('watchlist', JSON.stringify(favorite));
+}
+
+// preview infos
+let previewMovie = document.getElementsByClassName('view-profile');
+
+for(let i = 0; i<previewMovie.length; i++){
+  previewMovie[i].addEventListener('click', viewMovieinfo);
+}
+
+function viewMovieinfo(event){
+  // console.log(event.path[3].id);
+  let preview = Movies.allMovie[multiIndexOf(event.path[3].id)].id;
+  localStorage.setItem('profileId', preview);
+  window.location = '../pages/movieProfile.html';
+}
