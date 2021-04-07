@@ -848,7 +848,7 @@ footer a{
 #email{
     font-family: 'Roboto Slab', serif;
 }
-.fa{
+footer .fa{
     background-color: white;
     color: black;
 }
