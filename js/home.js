@@ -37,18 +37,25 @@ let addwatchList = document.querySelector('.addWatch')
 
 
 
-
+let newarrayimg;
 
 window.addEventListener('load', () => {
 
-    
+    // console.log(Movies.allMovie[0].mainImage)
 
   setInterval(() => {
 
     index++;
+
+    newarrayimg = Movies.allMovie[index].mainImage.split('/');
+
+    
+
+    newarrayimg.shift();
+    // console.log(newarrayimg.join('/'))
     if (index < 3) {
       
-      image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
+      image.setAttribute('src', `${newarrayimg.join('/')}`)
       watchtraler.setAttribute('id', `${Movies.allMovie[index].id}`);
       addwatchList.setAttribute('id',`${Movies.allMovie[index].id}`)
       veiwInfo.setAttribute('id',`${Movies.allMovie[index].id}`)
