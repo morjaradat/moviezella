@@ -129,7 +129,7 @@ let html = `<div class="container">
 
 container.innerHTML = html;
 
-document.getElementById("hero2").style.background =`url(${profile[0].mainImage})`;
+document.getElementById("hero2").style.cssText =`background : url(${profile[0].mainImage}); background-size :cover`;
 
 
 const watchSection=document.getElementById('watchlist');

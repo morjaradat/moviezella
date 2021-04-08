@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="animate__animated" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,11 +43,12 @@
             <p id="categories" >Fantasy Family Drama | Duration: 1h50m </p>
             <button class="btn1" id="16" >WATCH TRAILER</button>
             <button class="btn2" id="16" >VIEW INFO</button>
-            <a href="#"><i>+ Add to Watchlist</i></a>
+            <a  href="#"><i class="addWatch" id="16" >+ Add to Watchlist</i></a>
         </div>
 
         <div class="trailer">
-            <button id="closeBtn" onclick="closeTrailer()" class="fas fa-window-close"></button>
+            <i id="closeBtn" onclick="closeTrailer()" class="fas fa-window-close"></i>
+            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
 
@@ -121,11 +126,12 @@
     <script>
 
         let trailerBox = document.querySelector('.trailer');
+        let iframe = document.querySelector('iframe');
 
 
         function closeTrailer(){
         trailerBox.style.display = 'none'
-        console.log(5)
+        iframe.src =''
         }
     </script>
     <script src="js/data.js"></script>

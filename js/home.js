@@ -1,3 +1,12 @@
+let movieslist = JSON.parse(localStorage.getItem('watchlist'));
+if(movieslist){
+  movieslist = JSON.parse(localStorage.getItem('watchlist'))
+}else{
+  movieslist=[];
+}
+
+// console.log(movieslist)
+
 'use strict'
 window.addEventListener('scroll', () => {
   let header = document.querySelector('header');
@@ -20,6 +29,11 @@ let categories = document.getElementById('categories')
 let watchtraler = document.querySelector('.btn1');
 let veiwInfo = document.querySelector('.btn2');
 
+let addwatchList = document.querySelector('.addWatch')
+
+
+
+
 
 
 
@@ -30,12 +44,13 @@ window.addEventListener('load', () => {
     
 
   setInterval(() => {
+
     index++;
     if (index < 3) {
       
       image.setAttribute('src', `${Movies.allMovie[index].mainImage}`)
       watchtraler.setAttribute('id', `${Movies.allMovie[index].id}`);
-      watchtraler.addEventListener('click',openTrailer)
+      addwatchList.setAttribute('id',`${Movies.allMovie[index].id}`)
       veiwInfo.setAttribute('id',`${Movies.allMovie[index].id}`)
       movieName.textContent = Movies.allMovie[index].name;
       categories.textContent = `${Movies.allMovie[index].category} | Duration: ${Movies.allMovie[index].duration}`;
@@ -63,21 +78,18 @@ setInterval(() => {
 }, 20000);
 
 let trailerBox = document.querySelector('.trailer');
-
+let iFrame = document.querySelector('iframe');
+let htmlPath;
 function openTrailer(e){
   let id = parseInt(e.target.id) ;
 
-  console.log(Movies.allMovie[0].id)
+  console.log(id)
 
-  let html = `
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/${Movies.allMovie[id].path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-for(let i = 0 ; i < 3 ; i++){
-  if(id === Movies.allMovie[i].id){
-    trailerBox.innerHTML += html;
-    break;
-  }
-}
+    htmlPath = `https://www.youtube.com/embed/${Movies.allMovie[e.target.id-1].path}`
+    iFrame.src = htmlPath
+  
+
   trailerBox.style.display = 'block'
 
 }
@@ -87,7 +99,9 @@ function removeEvent(){
 
 }
 
+veiwInfo.addEventListener('click',storege);
 
+watchtraler.addEventListener('click',openTrailer)
 
 
 
@@ -119,7 +133,7 @@ trendBtn.addEventListener('click',()=>{
 
 
 
-
+// console.log(Movies.all[1]);
 
 
 const trendcardsContainer = document.getElementById('trendcardsContainer');
@@ -249,10 +263,13 @@ for(let i = 0 ; i < id_profile.length;i++){
 
 function storege(e){
     let id = e.target.id;
+
+    console.log(id)
     
     localStorage.setItem('profileId',id);
 
-    window.location = '../pages/movieProfile.html'
+    window.location = './pages/movieProfile.html'
+
 }
 
 // passing the movie profile Id 
@@ -277,9 +294,24 @@ function storege(e){
 
 
 
+// console.log(Movies.allMovie[1]);
+
+
+addwatchList.addEventListener('click',(e)=>{
+  // console.log(e.target.id);
+
+  console.log(Movies.allMovie[e.target.id-1])
+
+  movieslist.push(Movies.allMovie[e.target.id-1])
+  
+  localStorage.setItem('watchlist',JSON.stringify(movieslist))
+
+});
+
 
 
 
 
 
 //////////
+

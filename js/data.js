@@ -72,7 +72,7 @@ let allMovies = [
   {
     id:4,
     name : 'arrival',
-    categories :'Drama Sci-Fi',
+    categories :'Drama Sci-Fi Adventure',
     Duration: '1h56m',
     pathIds: 'tFMo3UJ4B4g',
     coverImg : 'arrival.jpg',
@@ -100,7 +100,7 @@ let allMovies = [
   {
     id:6,
     name : 'detachment',
-    categories :'Drama',
+    categories :'Drama family doc',
     Duration: '1h38m',
     pathIds: 'w7lBleOF9Pw',
     coverImg : 'detachment.jpg',
@@ -184,7 +184,7 @@ let allMovies = [
   {
     id:12,
     name : 'Capharnaüm',
-    categories :'Drama',
+    categories :'Drama family Thriller',
     Duration: '2h6m',
     pathIds: 'JBecbs52Fpo',
     coverImg : 'Capharnaüm.jpg',
@@ -212,7 +212,7 @@ let allMovies = [
   {
     id:14,
     name : 'Room',
-    categories :'Drama Thriller',
+    categories :'Drama family Thriller',
     Duration: '1h58m',
     pathIds: 'E_Ci-pAL4eE',
     coverImg : 'Room.jpg',
@@ -236,6 +236,21 @@ let allMovies = [
     views:171,
     rate : 3.3,
     year : 2010
+  },
+
+  {
+    id:16,
+    name : 'Wrath of the Titans',
+    categories :'Action Adventure Fantasy',
+    Duration: '1h39m',
+    pathIds: 'Xs7fzOrUopc',
+    coverImg : 'WrathoftheTitans.jpg',
+    actors : ['Sam Worthington','Liam Neeson','Ralph Fiennes'],
+    caractors:['Perseus','Zeus','Hades'],
+    intro:'Perseus braves the treacherous underworld to rescue his father, Zeus, captured by his son, Ares, and brother Hades who unleash the ancient Titans upon the world.',
+    views:171,
+    rate : 3.3,
+    year : 2012
   },
 
 ];
