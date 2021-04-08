@@ -252,7 +252,7 @@ function storege(e){
     
     localStorage.setItem('profileId',id);
 
-    window.location = '/pages/movieProfile.html'
+    window.location = '../pages/movieProfile.html'
 }
 
 // passing the movie profile Id 
